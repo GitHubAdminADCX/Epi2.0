@@ -17,3 +17,5 @@ C:\EPiStandard\WCF\bin\Microsoft.ApplicationInsights.xml
 C:\EPiStandard\WCF\obj\Debug\WCF.csprojResolveAssemblyReference.cache
 C:\EPiStandard\WCF\obj\Debug\WCF.dll
 C:\EPiStandard\WCF\obj\Debug\WCF.pdb
+C:\EPiStandard\WCF\bin\Services.dll
+C:\EPiStandard\WCF\bin\Services.pdb
