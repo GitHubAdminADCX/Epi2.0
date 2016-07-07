@@ -241,9 +241,6 @@
     </Compile>
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Service\StandardService.svc.cs">
-      <DependentUpon>StandardService.svc</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
@@ -254,7 +251,6 @@
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Service\StandardService.svc" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
