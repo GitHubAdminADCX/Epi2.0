@@ -5,9 +5,9 @@ using EPiServer;
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
-using Epi2._0.Models.Pages;
+using WebClient.Models.Pages;
 
-namespace Epi2._0.Controllers
+namespace WebClient.Controllers
 {
     public class HomeController : PageController<StandardPageType>
     {

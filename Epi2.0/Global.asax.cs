@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace Epi2._0
+namespace WebClient
 {
     public class EPiServerApplication : EPiServer.Global
     {

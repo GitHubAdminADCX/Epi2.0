@@ -5,7 +5,7 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 
-namespace Epi2._0.Models.Pages
+namespace WebClient.Models.Pages
 {
     [ContentType(DisplayName = "StandardPageType", GUID = "566c8a3a-be39-467f-a8c6-5230701b83d9", Description = "This is a standard page type model")]
     public class StandardPageType : PageData
