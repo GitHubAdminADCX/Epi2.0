@@ -19,3 +19,7 @@ C:\EPiStandard\WCF\obj\Debug\WCF.dll
 C:\EPiStandard\WCF\obj\Debug\WCF.pdb
 C:\EPiStandard\WCF\bin\Services.dll
 C:\EPiStandard\WCF\bin\Services.pdb
+C:\EPiStandard\WCF\bin\IoC.dll
+C:\EPiStandard\WCF\bin\SimpleInjector.dll
+C:\EPiStandard\WCF\bin\IoC.pdb
+C:\EPiStandard\WCF\bin\SimpleInjector.xml

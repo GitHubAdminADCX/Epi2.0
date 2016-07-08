@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IoC;
+using Services.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -9,7 +11,7 @@ using System.Text;
 
 namespace WCF
 {
-    [ServiceContract(Namespace = "")]
+    [ServiceContract(Namespace = "StandardService")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class StandardService
     {
@@ -19,10 +21,15 @@ namespace WCF
         //     and include the following line in the operation body:
         //         WebOperationContext.Current.OutgoingResponse.ContentType = "text/xml";
         [OperationContract]
-        public void DoWork()
+        [WebGet]
+        public string SayHello()
         {
             // Add your operation implementation here
-            return;
+            //Get the Comment Service
+            var service = ContainerRegistry.GetInstance<IStandardService>();
+            //Gets comment or page
+            var result = service.SayHello();
+            return result;
         }
 
         // Add more operations here and mark them with [OperationContract]
