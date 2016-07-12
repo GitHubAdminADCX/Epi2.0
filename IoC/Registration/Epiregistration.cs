@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleInjector;
+using Services.Infrastructure;
+using Services;
 
 namespace IoC.Registration
 {
@@ -19,12 +21,12 @@ namespace IoC.Registration
 
         public void RegisterRepositories(Container container)
         {
-            throw new NotImplementedException();
+            container.RegisterSingleton<IStandardService, StandardService>();
         }
 
         public void RegisterServices(Container container)
-        {
-            throw new NotImplementedException();
-        }
+        {   
+            container.RegisterSingleton<IStandardService, StandardService>();
+        }        
     }
 }

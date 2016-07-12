@@ -116,6 +116,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IoC\IoC.csproj">
+      <Project>{3E7F8F80-F083-45E2-92EE-0E418B1CDE80}</Project>
+      <Name>IoC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{726da06e-4275-41de-a7e9-9da8746a51e1}</Project>
       <Name>Services</Name>

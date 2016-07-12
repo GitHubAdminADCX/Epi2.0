@@ -48,7 +48,12 @@
     <Compile Include="Registration\Epiregistration.cs" />
     <Compile Include="Registration\IRegistration.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{726da06e-4275-41de-a7e9-9da8746a51e1}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

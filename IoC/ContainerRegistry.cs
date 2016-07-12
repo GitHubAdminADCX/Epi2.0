@@ -50,12 +50,12 @@ namespace IoC
             var uncachedcontainer = new Container();
 
             // 2. Configure the container (register)
-            registrations.ForEach(R => R.RegisterRepositories(container));
+           // registrations.ForEach(R => R.RegisterRepositories(container));
             registrations.ForEach(R => R.RegisterServices(container));
-            registrations.ForEach(R => R.RegisterInterception(container));
+            //registrations.ForEach(R => R.RegisterInterception(container));
 
-            registrations.ForEach(R => R.RegisterRepositories(uncachedcontainer));
-            registrations.ForEach(R => R.RegisterServices(uncachedcontainer));
+            //registrations.ForEach(R => R.RegisterRepositories(uncachedcontainer));
+            //registrations.ForEach(R => R.RegisterServices(uncachedcontainer));
 
             // 3. Optionally verify the container's configuration.
             container.Verify();
