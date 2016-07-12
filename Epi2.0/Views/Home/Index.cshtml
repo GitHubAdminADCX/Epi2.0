@@ -1,18 +1,6 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@using WebClient.Models.Pages
+@using WebClient.Models.ViewModels
 
-<!DOCTYPE html>
+@model PageViewModel<StandardPageType>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        This is very basic page without any Episerver properties
-    </div>
-</body>
-</html>
+@Html.PropertyFor(x => x.CurrentPage.MainBody)
