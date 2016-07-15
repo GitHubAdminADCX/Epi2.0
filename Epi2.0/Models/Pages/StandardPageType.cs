@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Shell.ObjectEditing;
 
 namespace WebClient.Models.Pages
 {
@@ -18,6 +19,23 @@ namespace WebClient.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        /*
+        Author:Amol Mahul
+        Purpose of the Class : To showcase the use of ColorPalette on string property
+        Dependent entities : N/A
+        How to use: use the following mentioned attributes on the property to display a color palette
+        Points to take care: Use only when the string value is supposed to store CTML color code
+        Highlight Risk : <Highlight risk if any involved>
+        Comments:  //EditorConfiguration = "{\"palette\": \"3x4\"}") use this additional attribute to change the paletter layout
+        */
+
+        [Display(
+        GroupName = SystemTabNames.Content,
+        Name = "Text Color",
+        Order = 50)]
+        [ClientEditor(ClientEditingClass = "dijit/ColorPalette")]
+        public virtual string TextColor { get; set; }
 
     }
 }
