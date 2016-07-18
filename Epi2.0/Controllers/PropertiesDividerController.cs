@@ -1,9 +1,9 @@
-﻿using Epi2._0.Models.Pages;
+﻿using WebClient.Models.Pages;
 using EPiServer.Web.Mvc;
 using System.Web.Mvc;
 using WebClient.Models.ViewModels;
 
-namespace Epi2._0.Controllers
+namespace WebClient.Controllers
 {
     public class PropertiesDividerController : PageController<PropertiesSeperator>
     {

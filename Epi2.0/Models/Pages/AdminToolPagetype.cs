@@ -1,7 +1,7 @@
 ﻿using EPiServer.PlugIn;
 using EPiServer.UI;
 
-namespace Epi2._0.Models.Pages
+namespace WebClient.Models.Pages
 {
     ///Author:Amol Pawar
     ///Purpose of the Class :A tool available in the admin section of EPiserver the business logic will be put in as per the requirement.

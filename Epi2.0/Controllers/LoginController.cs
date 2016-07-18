@@ -1,4 +1,4 @@
-﻿using Epi2._0.Models;
+﻿using WebClient.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebClient.Views.Blocks;
 
-namespace Epi2._0.Controllers
+namespace WebClient.Controllers
 {
     public class LoginController : Controller
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Epi2._0.Models
+namespace WebClient.Models
 {
     public class LoginModel
     {

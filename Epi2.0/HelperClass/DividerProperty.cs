@@ -10,7 +10,7 @@ using System.Web;
 using System.Web.UI.HtmlControls;
 using WebClient;
 
-namespace Epi2._0.HelperClass
+namespace WebClient.HelperClass
 {
     /// <summary>
     /// Class DividerProperty.

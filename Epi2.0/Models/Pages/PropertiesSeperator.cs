@@ -1,9 +1,9 @@
-﻿using Epi2._0.HelperClass;
+﻿using WebClient.HelperClass;
 using EPiServer.Core;
 using EPiServer.DataAnnotations;
 using System.ComponentModel.DataAnnotations;
 
-namespace Epi2._0.Models.Pages
+namespace WebClient.Models.Pages
 {
 
     ///Author:Amol Pawar

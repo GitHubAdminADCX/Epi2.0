@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Epi2._0.Controllers
+namespace WebClient.Controllers
 {
     public class MyAdminPluginController : Controller
     {

@@ -5,7 +5,7 @@ using System.Web;
 using EPiServer.PlugIn;
 using EPiServer.Scheduler;
 
-namespace Epi2._0.modules.ScheduledJobs
+namespace WebClient.modules.ScheduledJobs
 {
     /// <summary>
     /// Author: Snehal Jadhav

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Epi2._0.HelperClass
+namespace WebClient.HelperClass
 {
     [EditorDescriptorRegistration(TargetType = typeof(DividerProperty), UIHint = "Divider")]
     public class DividerEditorDescriptor : EditorDescriptor
