@@ -236,9 +236,17 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyAdminPluginController.cs" />
+    <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pages\AdminToolPagetype.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelperClass\DividerProperty.cs" />
+    <Compile Include="Models\Pages\PropertiesSeperator.cs" />
+    <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
@@ -266,6 +274,9 @@
     <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MyAdminPlugin\Index.cshtml" />
+    <Content Include="module.config" />
+    <Content Include="Views\PropertiesDivider\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
