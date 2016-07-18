@@ -237,12 +237,20 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyAdminPluginController.cs" />
+    <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyPlugin.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HelperClass\DividerProperty.cs" />
+    <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Pages\AdminToolPagetype.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
@@ -259,6 +267,9 @@
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientResources\Scripts\Editors\divider.js" />
+    <Content Include="ClientResources\Styles\LayoutIcons.css" />
+    <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="Static\css\Editor.css" />
     <Content Include="Util\Editor\tinymce\plugins\MyPlugin\editor_plugin.js" />
     <Content Include="js\jquery.validate.min.js" />
@@ -282,6 +293,9 @@
     <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\MyAdminPlugin\Index.cshtml" />
+    <Content Include="Views\PropertiesDivider\Index.cshtml" />
+    <Content Include="module.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
