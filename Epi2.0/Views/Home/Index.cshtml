@@ -3,4 +3,16 @@
 
 @model PageViewModel<StandardPageType>
 
+
+
 @Html.PropertyFor(x => x.CurrentPage.MainBody)
+
+<h2>hello home</h2>
+
+@using (Html.BeginForm("LogOut", "Home"))
+{
+    <input type="submit" value="logout" />
+}
+
+<a href="http://localhost:50064/episerver/cms" target="_blank">Go To Cms</a>
+

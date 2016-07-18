@@ -1,0 +1,28 @@
+﻿@model Epi2._0.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+
+<script src="~/js/jquery.validate.min.js"></script>
+
+
+<h2>LoginPage</h2>
+
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.LabelFor(a => a.UserName)<br/>
+    @Html.TextBoxFor(a => a.UserName)<br />
+    @Html.LabelFor(a => a.Password)<br />
+    @Html.TextBoxFor(a => a.Password)<br />
+    <input type="submit" /><br />
+            @Html.ValidationSummary()
+}
+
+
+

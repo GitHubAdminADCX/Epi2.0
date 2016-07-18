@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Epi2._0</RootNamespace>
-    <AssemblyName>Epi2.0</AssemblyName>
+    <RootNamespace>WebClient</RootNamespace>
+    <AssemblyName>WebClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>true</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -235,48 +235,53 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MyAdminPluginController.cs" />
-    <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Editor\TinyMCE\Plugins\MyPlugin.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Pages\AdminToolPagetype.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HelperClass\DividerProperty.cs" />
-    <Compile Include="Models\Pages\PropertiesSeperator.cs" />
-    <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
+    <Compile Include="modules\ScheduledJobs\DeleteJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Blocks\DefaultBlock1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
+    <Folder Include="Customization\" />
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Static\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Static\css\Editor.css" />
+    <Content Include="Util\Editor\tinymce\plugins\MyPlugin\editor_plugin.js" />
+    <Content Include="js\jquery.validate.min.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\GeoLiteCity.dat" />
     <None Include="EPiServerLog.config" />
     <Content Include="packages.config" />
-    <Content Include="modules\_protected\Shell\web.config" />
+    <Content Include="modules\_protected\Shell\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="modules\_protected\Shell\Shell.zip" />
-    <Content Include="modules\_protected\CMS\web.config" />
+    <Content Include="modules\_protected\CMS\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\MyAdminPlugin\Index.cshtml" />
-    <Content Include="module.config" />
-    <Content Include="Views\PropertiesDivider\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
