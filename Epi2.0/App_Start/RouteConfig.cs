@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WebApplication2
+namespace WebClient
 {
     public class RouteConfig
     {
@@ -18,6 +18,9 @@ namespace WebApplication2
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute("myadminplugin", "MyAdminPlugin/{action}",
+            new { controller = "MyAdminPlugin", action = "Index" });
         }
     }
 }
