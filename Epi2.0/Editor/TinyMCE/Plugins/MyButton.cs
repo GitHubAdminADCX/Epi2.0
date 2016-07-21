@@ -11,10 +11,8 @@ namespace WebClient.Editor.TinyMCE.Plugins
     /// Purpose of the Class : Creates a button in tiny mce plugin in Episerver Admin
     /// How to use: Add the control from the custom setting of the XHTMLString property    
     /// </summary>
-    [TinyMCEPluginButton(PlugInName = "mybutton", ButtonName =
-           "My Button", GroupName = "misc", LanguagePath =
-           "/admin/tinymce/plugins/mybutton", EditorInitConfigurationOptions = "@{ extended_valid_elements:'img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]'}"
-            )]
+    [TinyMCEPluginButton(PlugInName = "mybutton", ButtonName ="My Button", 
+        GroupName = "misc", LanguagePath ="/admin/tinymce/plugins/mybutton")]
     public class MyButton
     {
     }
