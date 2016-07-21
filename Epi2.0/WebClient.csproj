@@ -237,8 +237,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomePartialController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyPlugin.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -247,12 +249,14 @@
     </Compile>
     <Compile Include="HelperClass\DividerProperty.cs" />
     <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
+    <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
+    <Compile Include="Models\Pages\ValidationPreviewRenderer.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="modules\ScheduledJobs\DeleteJob.cs" />
@@ -299,6 +303,8 @@
     <Content Include="Views\MyAdminPlugin\Index.cshtml" />
     <Content Include="Views\PropertiesDivider\Index.cshtml" />
     <Content Include="module.config" />
+    <Content Include="Views\ValidationPreviewRenderer\Index.cshtml" />
+    <Content Include="Views\HomePartial\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

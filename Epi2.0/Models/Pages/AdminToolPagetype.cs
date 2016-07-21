@@ -1,4 +1,5 @@
 ﻿using EPiServer.PlugIn;
+using EPiServer.Shell.WebForms;
 using EPiServer.UI;
 
 namespace WebClient.Models.Pages
@@ -19,7 +20,7 @@ namespace WebClient.Models.Pages
     RequiredAccess = EPiServer.Security.AccessLevel.Administer,
     Area = PlugInArea.AdminMenu,
     UrlFromModuleFolder = "/MyAdminPlugin")]
-    public class AdminToolPagetype : SystemPageBase
+    public class AdminToolPagetype : WebFormsBase
     {
        
        
