@@ -1,4 +1,4 @@
-﻿(function () {
+﻿(function (tinymce, $) {
     tinymce.create('tinymce.plugins.MyButton', {
         init: function (ed, url) {
 
@@ -11,24 +11,15 @@
                 text: 'My button',
                 title: 'My Button',
                 icon: false,
-                image: url + '/Mybutton.gif',
+                image: url + 'Util/Editor/tinymce/plugins/MyButton/MyButton.gif',
                 onclick: function () {
-                    // Open window
-                    ed.windowManager.open({
-                        title: 'Example plugin',
-                        body: [
-                            { type: 'textbox', name: 'title', label: 'Title' }
-                        ],
-                        onsubmit: function (e) {
-                            // Insert content when the window form is submitted
-                            ed.insertContent('Title: ' + e.data.title);
-                        }
-                    });
+                    // Add you own code to execute something on click
+                    ed.focus();
+                    ed.selection.setContent('Hello world!');
                 }
-
             });
 
             tinymce.PluginManager.add('MyButton', tinymce.plugins.MyButton);
         }
     });
-})();
+})(tinymce, epiJQuery);
