@@ -1,19 +1,13 @@
 ﻿@using WebClient.Models.ViewModels;
 @using WebClient.Models.Pages
 @model PageViewModel<PropertiesSeperator>
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-    </div>
-</body>
-</html>
+
+<div>Hii, Using Block here</div>
+<div>
+    @Html.PropertyFor(m => m.CurrentPage.contenthere)
+</div>
+<div>
+</div>
+

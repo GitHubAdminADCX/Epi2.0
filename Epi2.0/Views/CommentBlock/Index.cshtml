@@ -1,0 +1,101 @@
+﻿@using WebClient.Models.Blocks
+@using WebClient.Models.ViewModels
+@using EPiServer.ServiceLocation
+@using EPiServer.Web.Routing
+@model CommentViewModel
+
+<div>
+    Post comment here...
+</div>
+@*, new { pageId = Model.pageId }*@
+@foreach (var item in Model.Comments)
+{
+
+
+
+    <div style="width:100%" class="dvcomments">
+        @item.CommentText , @item.Date
+
+        <input type="hidden" name="ParentcommentId" value="@item.CommentId" />
+        <input type="button" class="btnreply" value="Reply" onclick="Reply($(this))" />
+        <div class="dvReply" style="width:100%;">
+            <div class="childcomments" style="width:100%">
+
+            </div>
+            <div>
+                @*<input type="text" />*@
+
+
+                @using (Html.BeginForm("Addcomment", "CommentBlock", FormMethod.Post))
+                {
+
+                    <div>
+                        <input type="hidden" name="commentId" value="@item.CommentId" />
+                        <input type="hidden" name="pageId" value="@Model.pageId" />
+                        <input type="hidden" name="urlstring" value="@Model.pageURl" />
+                        @Html.TextArea("commentText", new { rows = 10, columns = 40 })
+                        <input id="AddComment" type="submit" value="AddComment" />
+                    </div>
+
+                }
+            </div>
+        </div>
+
+
+
+        @*<div style="width:100%" >*@
+        @*@{Html.RenderPartial("~/Views/ReplyToComment/Index.cshtml", item.CommentId.ToString()); }*@
+        @*@Html.ActionLink("Reply/Comment","RenderReplyPartialView",new { ParentCommentId = item.CommentId.ToString() })*@
+        @*</div>*@
+    </div>
+}
+
+@using (Html.BeginForm("Addcomment", "CommentBlock", FormMethod.Post))
+{
+
+    <div>
+        <input type="hidden" name="commentId" value="" />
+        <input type="hidden" name="pageId" value="@Model.pageId" />
+        <input type="hidden" name="urlstring" value="@Model.pageURl" />
+        @Html.TextArea("commentText", new { rows = 10, columns = 40 })
+        <input id="AddComment" type="submit" value="AddComment" />
+    </div>
+
+}
+<head>
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $('.dvReply').hide();
+        function Reply(c) {
+           
+            $('.dvReply').hide();
+            $(c.parent('.dvcomments')).find('.dvReply').show();
+            //dvReply
+            $.ajax({
+                type: "GET",
+                url: "/../../CommentBlock/GetAllChildComments",
+                data: { 'ParentCommentId': c.parent('.dvcomments').find('input[name=ParentcommentId]').val() },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: successFunc,
+                error: errorFunc         
+               });
+            function successFunc(data, status) {
+                if (data.length > 0) {
+                    var htmlstr = "";
+                    htmlstr = htmlstr + '<span>Total Reply : ' + data.length + '</span><br/>';
+                    for (var key in data) {
+                        htmlstr = htmlstr + '<span>' + data[key]["CommentId"] + ',' + data[key]["CommentText"] + '</span><br/>'
+                    }
+
+                    $(c.parent('.dvcomments')).find('.childcomments').html('').append(htmlstr);
+                }
+            }
+            function errorFunc() {
+                alert('error');
+            }
+
+        }
+
+    </script>
+</head>

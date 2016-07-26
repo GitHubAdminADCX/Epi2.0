@@ -31,5 +31,7 @@ namespace WebClient.Models.Pages
 
         [Display(Order = 2, Description = "Test Property", Name = "TestProperty")]
         public virtual string ABC { get; set; }
+
+        public virtual ContentArea contenthere { get; set; }
     }
 }
