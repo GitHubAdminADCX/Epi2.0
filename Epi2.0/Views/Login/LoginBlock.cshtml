@@ -1,10 +1,6 @@
-﻿
-
-@{
+﻿@{
     ViewBag.Title = "Login";
 }
-
-<!DOCTYPE html>
 
 @*login get method..
     filtering the URL so that it can properly map to edit mode URL
@@ -14,14 +10,24 @@
     the logic is if the cookie is present then display logout text otherwise display login text*@
 
 
-<h2>hi this is login page</h2>
+<!DOCTYPE html>
+
+<h2>LoginPage</h2>
 
 
 
+<div>
+    @if(Request.Cookies[".EPiServerLogin"] == null)
+    {
+    <a href=@ViewBag.LoginPage target="_blank" id="cmslogin">login</a>
+    }
+    else
+    {
 
+    @Html.ActionLink("Logout", "LogOut", "Home");
+    }
 
-
-
+</div>
 
 
 
