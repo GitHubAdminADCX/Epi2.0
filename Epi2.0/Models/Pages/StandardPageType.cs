@@ -10,6 +10,12 @@ namespace WebClient.Models.Pages
     [ContentType(DisplayName = "StandardPageType", GUID = "566c8a3a-be39-467f-a8c6-5230701b83d9", Description = "This is a standard page type model")]
     public class StandardPageType : PageData
     {
+        [Display(Name = "Content Area",
+    Description = "A block that lists latest books.",
+    GroupName = SystemTabNames.Content,
+    Order = 3)]
+        public virtual ContentArea LatestBooks { get; set; }
+
 
         [CultureSpecific]
         [Display(
