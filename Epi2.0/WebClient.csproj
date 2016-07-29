@@ -241,7 +241,7 @@
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
-    <Compile Include="Editor\TinyMCE\Plugins\PasteUnformattedPlugin.cs" />
+    <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -274,7 +274,7 @@
     <Content Include="Static\css\Editor.css" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\editor_plugin.js" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
-    <Content Include="Util\Editor\tinymce\plugins\MyPlugin\editor_plugin.js" />
+    <Content Include="Util\Editor\tinymce\plugins\PasteUnformatted\editor_plugin.js" />
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />

@@ -1,4 +1,5 @@
 ﻿/*
+
 Author: Snehal Jadhav
 Purpose of the Class : Creates a button in tiny mce plugin in Episerver Admin
 How to use: Add the control from the custom setting of the XHTMLString property  
@@ -21,7 +22,7 @@ Points to take care: will have cs file with TinyMceButtonPlugin attribute
         }
     });
 
-    tinymce.PluginManager.add('PasteUnformattedPlugin', tinymce.plugins.PasteUnformattedPlugin);
+    tinymce.PluginManager.add('PasteUnformatted', tinymce.plugins.PasteUnformattedPlugin);
 
 }());
 

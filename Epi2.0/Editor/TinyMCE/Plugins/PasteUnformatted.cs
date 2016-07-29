@@ -7,6 +7,7 @@ using EPiServer.Editor.TinyMCE;
 namespace WebClient.Editor.TinyMCE.Plugins
 {
     /// <summary>
+    /// FRM006
     /// Author: Snehal Jadhav
     /// Purpose of the Class : Creates a non visual plugin in tiny mce plugin in Episerver Admin to paste text unformatted.
     /// How to use: Add the control from the custom setting of the XHTMLString property    
@@ -14,7 +15,7 @@ namespace WebClient.Editor.TinyMCE.Plugins
     /// </summary>
     [TinyMCEPluginNonVisual(
           AlwaysEnabled = true,
-          PlugInName = "PasteUnformattedPlugin",
+          PlugInName = "PasteUnformatted",
           DisplayName = "Custom editor paste unformatted",
           Description = "Loads custom editor paste unformatted option",         
           DefaultEnabled = true,
@@ -28,7 +29,7 @@ namespace WebClient.Editor.TinyMCE.Plugins
             convert_newlines_to_brs : false
           }"
           )]
-    public class PasteUnformattedPlugin
+    public class PasteUnformattedNonVisualPlugin
     {
     }
 }

@@ -1,4 +1,5 @@
 ﻿/*
+FRM006
 Author: Snehal Jadhav
 Purpose of the Class : Creates a button which will display text in editor on click or open a window in tiny mce plugin
 How to use: Add the control from the custom misc setting to the tiny mce editor toolbar of the XHTMLString property  
@@ -25,10 +26,10 @@ Points to take care: will have cs file with TinyMceButtonPlugin attribute
                 onclick: function () {
                     // Add you own code logic to execute on click
                     ed.focus();
-                    ed.selection.setContent('Hello world!');
+                    ed.selection.setContent('Hello world ! ');
 
-                    // Open window on button click code               
-                    //            editor.windowManager.open({
+                    //// Open window on button click code               
+                    //            ed.windowManager.open({
                     //                title: 'TinyMCE site',
                     //                url: 'http://www.tinymce.com',
                     //                width: 800,
