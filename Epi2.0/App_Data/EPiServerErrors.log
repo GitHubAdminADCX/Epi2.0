@@ -577,3 +577,32 @@ System.Web.HttpException (0x80004005): Not found: http://localhost:50064/Home/In
    at EPiServer.Shell.Services.Rest.RestHttpHandler.EndProcessRequest(IAsyncResult result)
    at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-07-26 16:15:42,637 [15] ERROR EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler: Web socket communication failure
+System.Net.WebSockets.WebSocketException (0x800703E3): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Web.WebSockets.WebSocketPipe.<>c__DisplayClass9_0.<ReadFragmentAsync>b__0(Int32 hrError, Int32 cbIO, Boolean fUtf8Encoded, Boolean fFinalFragment, Boolean fClose)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.WebSockets.AspNetWebSocket.<DoWork>d__45`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.WebSockets.AspNetWebSocket.<>c__DisplayClass36_0.<<ReceiveAsyncImpl>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.<ProcessWebSocketRequestAsync>d__0.MoveNext()
+System.Net.WebSockets.WebSocketException (0x800703E3): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Web.WebSockets.WebSocketPipe.<>c__DisplayClass9_0.<ReadFragmentAsync>b__0(Int32 hrError, Int32 cbIO, Boolean fUtf8Encoded, Boolean fFinalFragment, Boolean fClose)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.WebSockets.AspNetWebSocket.<DoWork>d__45`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.WebSockets.AspNetWebSocket.<>c__DisplayClass36_0.<<ReceiveAsyncImpl>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at EPiServer.Shell.UI.Messaging.Internal.DefaultWebSocketHandler.<ProcessWebSocketRequestAsync>d__0.MoveNext()
