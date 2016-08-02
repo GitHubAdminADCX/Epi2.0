@@ -8,3 +8,6 @@
 *.dll
 *.pdb
 *.txt
+/IoC/obj/Debug
+/Services/obj/Debug
+/WCF/obj/Debug
