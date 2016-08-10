@@ -242,6 +242,7 @@
     <Compile Include="Controllers\HomePartialController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Controllers\RssPageController.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyPlugin.cs" />
@@ -251,6 +252,7 @@
     </Compile>
     <Compile Include="HelperClass\DividerProperty.cs" />
     <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
+    <Compile Include="HelperClass\RSSResult.cs" />
     <Compile Include="Models\Blocks\CommentBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
@@ -314,6 +316,7 @@
     <Content Include="Views\HomePartial\Index.cshtml" />
     <Content Include="Views\CommentBlock\Index.cshtml" />
     <Content Include="Views\Login\LoginBlock.cshtml" />
+    <Content Include="Views\RssPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
