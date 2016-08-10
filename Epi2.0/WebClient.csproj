@@ -178,6 +178,7 @@
       <HintPath>..\packages\structuremap.web-signed.3.1.6.186\lib\net40\StructureMap.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -244,7 +245,7 @@
     <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
-    <Compile Include="Editor\TinyMCE\Plugins\MyPlugin.cs" />
+    <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -266,12 +267,14 @@
     <Compile Include="Models\ViewModels\IBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
-    <Compile Include="modules\ScheduledJobs\DeleteJob.cs" />
+    <Compile Include="Customization\ScheduledJobs\DeleteJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Blocks\DefaultBlock1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Customization\" />
+    <Folder Include="Business\" />
+    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\Shared\" />
@@ -285,7 +288,7 @@
     <Content Include="Static\css\Editor.css" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\editor_plugin.js" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
-    <Content Include="Util\Editor\tinymce\plugins\MyPlugin\editor_plugin.js" />
+    <Content Include="Util\Editor\tinymce\plugins\PasteUnformatted\editor_plugin.js" />
     <Content Include="js\jquery.validate.min.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
