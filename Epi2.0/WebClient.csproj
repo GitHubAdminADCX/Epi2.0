@@ -180,6 +180,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -237,6 +238,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Business\Entities\DDS\Comment.cs" />
+    <Compile Include="CommentService.svc.cs">
+      <DependentUpon>CommentService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
@@ -281,6 +285,7 @@
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
+    <Content Include="CommentService.svc" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="Static\css\Editor.css" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\editor_plugin.js" />
