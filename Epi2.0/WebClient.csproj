@@ -240,6 +240,7 @@
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
+    <Compile Include="Controllers\MenuTreeController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
@@ -253,6 +254,7 @@
     <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
     <Compile Include="Models\Blocks\CommentBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
+    <Compile Include="Models\Blocks\MenuTree.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
@@ -274,7 +276,9 @@
     <Folder Include="Customization\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
+    <Folder Include="Views\MenuTree\" />
     <Folder Include="Views\Shared\" />
+    <Folder Include="Views\TreeView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DBScript\DDSComment.txt" />
