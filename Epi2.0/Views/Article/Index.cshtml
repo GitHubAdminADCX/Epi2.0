@@ -1,0 +1,36 @@
+﻿@using WebClient.Models.ViewModels
+@model  ArticleViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Article Page</title>
+</head>
+<body>
+    <div>
+        @Html.PropertyFor(x => x.MainBody)
+       
+        <div class="container">
+            @if (Model != null && Model.LinksList != null && Model.LinksList.LinksList != null && Model.LinksList.LinksList.Count > 0)
+            {
+                foreach (var link in Model.LinksList.LinksList)
+                {
+                    <ul class="link-list footer-links">
+                        <li>
+                            <a target="_blank" rel="external" href="@link.Link" class="external-link" style="icon:@link.Image">
+                                <span>@link.LinkText</span>
+                            </a>
+                        </li>
+                    </ul>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

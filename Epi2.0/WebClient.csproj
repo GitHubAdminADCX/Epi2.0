@@ -237,9 +237,11 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Customization\CustomProperties\PropertyCustomLink.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -247,14 +249,20 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HelperClass\DividerProperty.cs" />
+    <Compile Include="HelperClass\LinksEditorDescriptor.cs" />
     <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
+    <Compile Include="Models\Blocks\LinkPropertyBlock.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\Pages\ArticlePageType.cs" />
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
+    <Compile Include="Models\ViewModels\ArticleViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\LinkDetails.cs" />
+    <Compile Include="Models\ViewModels\LinksViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Customization\ScheduledJobs\DeleteJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -262,13 +270,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
-    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
+    <Content Include="ClientResources\Scripts\LinksCustomProperty\LinksProperty.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="Static\css\Editor.css" />
@@ -299,6 +307,7 @@
     <Content Include="Views\MyAdminPlugin\Index.cshtml" />
     <Content Include="Views\PropertiesDivider\Index.cshtml" />
     <Content Include="module.config" />
+    <Content Include="Views\Article\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
