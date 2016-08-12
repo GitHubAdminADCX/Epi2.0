@@ -1,6 +1,8 @@
 ﻿@using WebClient.Models.Pages
 @using WebClient.Models.ViewModels
 
+
+
 @*login get method..
     filtering the URL so that it can properly map to edit mode URL
     created a login block in which the the login and logout link is visible
@@ -11,6 +13,8 @@
 
 
 @model PageViewModel<StandardPageType>
+
+@Html.PropertyFor(m => m.CurrentPage.MailingBlock)
 
 @Html.PropertyFor(m => m.CurrentPage.LatestBooks)
 

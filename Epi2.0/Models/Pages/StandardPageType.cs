@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using WebClient.Models.Blocks;
 
 namespace WebClient.Models.Pages
 {
@@ -24,6 +25,8 @@ namespace WebClient.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        public virtual MailBlock MailingBlock { get; set; }
 
     }
 }
