@@ -13,7 +13,7 @@ namespace UnitTest
     [TestFixture]
     public class TestClass
     {
-        [TestCase]
+        [Test]
         public void testSayHello()
         {
             StandardService service = new StandardService();
@@ -21,7 +21,7 @@ namespace UnitTest
             Assert.AreEqual(result, "Hello World");
         }
 
-        [TestCase]
+        [Test]
         public void testService()
         {
             Mock<IStandardService> serviceContainer = new Mock<IStandardService>();           
