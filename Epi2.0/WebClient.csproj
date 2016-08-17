@@ -251,7 +251,10 @@
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Controllers\RssPageController.cs" />
+    <Compile Include="Controllers\SiteConfig.cs" />
+    <Compile Include="Controllers\SiteMap.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
+    <Compile Include="Controllers\XMLClassSerializer.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
