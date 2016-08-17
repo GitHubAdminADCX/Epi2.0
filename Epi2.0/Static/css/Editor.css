@@ -1,0 +1,48 @@
+﻿body
+{
+    background-color: White;
+}
+
+body.editmode ul li, body.editmode ol li{
+	margin-left: 20px;
+	padding: 0 5px 5px 5px;
+	list-style-type: disc;
+}
+
+body.editmode ol li{
+	margin-left: 20px;
+	padding: 0 5px 5px 5px;
+	list-style-type: decimal;
+}
+
+
+h1
+{
+    EditMenuName: H1;
+}
+
+h2
+{
+    EditMenuName: H2;
+}
+
+h3
+{
+    EditMenuName: H3;
+}
+
+h4
+{
+    EditMenuName: H4;
+}
+
+
+span.image-author
+{
+	font-style:italic;
+	float:right;
+}
+
+p.image-description{
+	font-style:italic;
+}

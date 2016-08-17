@@ -1,0 +1,128 @@
+﻿@using WebClient.Models.Blocks
+@using WebClient.Models.ViewModels
+@using EPiServer.ServiceLocation
+@using EPiServer.Web.Routing
+@model CommentViewModel
+
+<div>
+    <span>Comment Block</span><br />
+    <span>Post comment here...</span>
+</div>
+<div class="maindv">
+    @foreach (var item in Model.Comments)
+    {
+        <div style="width:100%" class="dvcomments">
+            @item.CommentText 
+            <input type="hidden" name="ParentcommentId" value="@item.CommentId" />
+            <input type="button" class="btnreply" value="Reply" onclick="Reply($(this))" />
+            <div class="dvReply" style="width:100%;">
+                <div class="childcomments" style="width:100%">
+                </div>
+                <div>
+                    <div class="Addchildcomments">
+                        <input type="hidden" name="commentId" value="@item.CommentId" />
+                        <input type="hidden" name="pageId" value="@Model.pageId" />
+                        <input type="hidden" name="urlstring" value="@Model.pageURl" />
+                        <textarea name="commentText"></textarea>
+                        @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
+                        <input id="AddChildComment" type="submit" value="AddComment" onclick="AddComment($(this))" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*@using (Html.BeginForm("Addcomment", "CommentBlock", FormMethod.Post))
+{*@
+
+    <div class="Addchildcomments">
+        <input type="hidden" name="commentId" value="" />
+        <input type="hidden" name="pageId" value="@Model.pageId" />
+        <input type="hidden" name="urlstring" value="@Model.pageURl" />
+        <textarea name="commentText"></textarea>
+        @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
+        <input id="AddComment" type="submit" value="AddComment" onclick="AddComment($(this))" />
+    </div>
+
+@*}*@
+
+
+<head>
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $('.dvReply').hide();
+
+        function AddComment(c) {
+            if (c.parent('.Addchildcomments').find('textarea[name=commentText]').val().trim() != "") {
+                var data = {
+                    pageId: c.parent('.Addchildcomments').find('input[name=pageId]').val(),
+                    commentText: c.parent('.Addchildcomments').find('textarea[name=commentText]').val(),
+                    urlstring: c.parent('.Addchildcomments').find('input[name=urlstring]').val(),
+                    commentId: c.parent('.Addchildcomments').find('input[name=commentId]').val()
+                };
+
+                $.getJSON('/CommentService.svc/Addcomment', data, successFunc, errorFunc);
+                function successFunc(data) {
+                    var htmlstr = "";
+                    if (data.d.ParentCommentId == "") {
+
+                        htmlstr = htmlstr + "<div style='width:100%' class='dvcomments'>" + data.d.CommentText + "<input type='hidden' name='ParentcommentId' value='" + data.d.CommentId + "' /><input type='button' class='btnreply' value='Reply' onclick='Reply($(this))' />"
+                        htmlstr = htmlstr + "<div class='dvReply' style='width:100%;'><div class='childcomments' style='width:100%'></div><div><div class='Addchildcomments'><input type='hidden' name='commentId' value='" + data.d.CommentId + "' /><input type='hidden' name='pageId' value='" + data.d.PageId + "' />"
+                        htmlstr = htmlstr + "<input type='hidden' name='urlstring' value=''/><textarea name='commentText'></textarea><input id='AddChildComment' type='submit' value='AddComment' onclick='AddComment($(this))' /></div></div></div></div>"
+
+                        $('.maindv').append(htmlstr);
+                        $('.dvReply').hide();
+                        c.parent('.Addchildcomments').find('textarea[name=commentText]').val('');
+
+                    } else {
+
+                        htmlstr = htmlstr + '<span>' + data.d["CommentId"] + ',' + data.d["CommentText"] + '</span><br/>'
+                        $(c.closest('.dvcomments')).find('.childcomments').append(htmlstr);
+                        c.parent('.Addchildcomments').find('textarea[name=commentText]').val('');
+                      
+                        var cnt = $(c.closest('.dvcomments')).find('.childcomments').find('#rplcnt').text();
+                        cnt++;
+                        $(c.closest('.dvcomments')).find('.childcomments').find('#rplcnt').text(cnt);
+                        
+                    }
+
+
+
+                };
+
+                function errorFunc() {
+                    alert('error');
+                }
+            }
+        }
+
+        function Reply(c) {
+
+            $('.dvReply').hide();
+            $(c.parent('.dvcomments')).find('.dvReply').show();
+
+            var data = {
+                ParentCommentId: c.parent('.dvcomments').find('input[name=ParentcommentId]').val()
+            };
+
+            $.getJSON('/CommentService.svc/GetAllChildComments', data, successFunc, errorFunc);
+
+            function successFunc(data, status) {
+                if (data.d.length > 0) {
+                    var htmlstr = "";
+                    htmlstr = htmlstr + '<span id="rplcntspan" value=' + data.d.length + '>Total Reply : <lable id="rplcnt">' + data.d.length + '</lable></span><br/>';
+                    for (var key in data.d) {
+                        htmlstr = htmlstr + '<span>' + data.d[key]["CommentId"] + ',' + data.d[key]["CommentText"] + '</span><br/>'
+                    }
+
+                    $(c.parent('.dvcomments')).find('.childcomments').html('').append(htmlstr);
+                }
+            }
+            function errorFunc() {
+                alert('error');
+            }
+
+        }
+
+    </script>
+</head>

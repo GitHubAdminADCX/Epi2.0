@@ -1,0 +1,40 @@
+﻿@using EPiServer.Core;
+@model PageDataCollection
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyAdminPlugInView</title>
+</head>
+<body>
+    <div>
+        <label>MyAdminPlugInView</label>
+        @{var i = 0;}
+        
+        @foreach (var obj in Model)
+        {
+           
+            if (i == 0 )
+            {
+                i =i+1;
+                <div>
+                    + @obj.Name
+                    
+
+                </div>
+                
+            }
+            else
+            {<div>
+            - @obj.Name
+        </div>  }
+
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+@*login get method..FRM008
+    filtering the URL so that it can properly map to edit mode URL
+    created a login block in which the the login and logout link is visible
+    if edit mode is logedin then logout text would be displayed otherwise login text would be displayed
+    the login and logout text logic is based on cookie created when we login in episerver edit mode.
+    the logic is if the cookie is present then display logout text otherwise display login text*@
+
+
+<!DOCTYPE html>
+
+<h2>LoginPage</h2>
+
+
+
+<div>
+    @if(Request.Cookies[".EPiServerLogin"] == null)
+    {
+    <a href=@ViewBag.LoginPage target="_blank" id="cmslogin">login</a>
+    }
+    else
+    {
+
+    @Html.ActionLink("Logout", "LogOut", "Home");
+    }
+
+</div>
+
+
+
