@@ -9,7 +9,7 @@ using System.Web;
 namespace WebClient.Business.Entities.DDS
 {
     [EPiServerDataTable(TableName = "tblBigTableComment")]
-    [EPiServerDataStore(AutomaticallyCreateStore = true, AutomaticallyRemapStore = true, StoreName = "Episerver")]
+    [EPiServerDataStore(AutomaticallyCreateStore = true, AutomaticallyRemapStore = true, StoreName = "CommentStore")]
     public class Comment : IDynamicData
     {
         public Identity Id { get; set; }

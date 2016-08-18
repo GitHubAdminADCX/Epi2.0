@@ -239,12 +239,14 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\Entities\DDS\Answer.cs" />
     <Compile Include="Business\Entities\DDS\Comment.cs" />
     <Compile Include="Business\Entities\DDS\DDS_Mail.cs" />
     <Compile Include="CommentService.svc.cs">
       <DependentUpon>CommentService.svc</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CommentBlockController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
     <Compile Include="Controllers\MailingController.cs" />
@@ -260,6 +262,9 @@
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="ForumService.svc.cs">
+      <DependentUpon>ForumService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,11 +281,13 @@
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\Pages\Forum.cs" />
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\RssPage.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\Pages\StartPageType.cs" />
     <Compile Include="Models\Pages\ValidationPreviewRenderer.cs" />
+    <Compile Include="Models\ViewModels\AnswerViewModel.cs" />
     <Compile Include="Models\ViewModels\BlockViewModel.cs" />
     <Compile Include="Models\ViewModels\CommentViewmodel.cs" />
     <Compile Include="Models\ViewModels\IBlockViewModel.cs" />
@@ -307,6 +314,7 @@
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="CommentService.svc" />
+    <Content Include="ForumService.svc" />
     <Content Include="GruntFile.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="node_modules\grunt-contrib-watch\node_modules\async\dist\async.js" />
@@ -10206,6 +10214,7 @@
     <Content Include="node_modules\node\package.json" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\Forum\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -10248,7 +10257,7 @@
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
+      <StyleCopTreatErrorsAsWarnings>true</StyleCopTreatErrorsAsWarnings>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\StyleCop.MSBuild.4.7.54.0\build\StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StyleCop.MSBuild.4.7.54.0\build\StyleCop.MSBuild.Targets'))" />
   </Target>

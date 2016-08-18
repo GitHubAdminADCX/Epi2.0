@@ -1,0 +1,102 @@
+﻿@using WebClient.Models.ViewModels
+@model AnswerViewModel
+
+@{
+    Layout = null;
+}
+@if (Model.ForumProperties.Question != null)
+{
+    <div>
+        @Html.PropertyFor(m => m.ForumProperties.Question)
+        <input type="hidden" class="hdnPageID" value="@Model.pageId" />
+    </div>
+    <div class="dvanswer" style="width:100%">
+
+    </div>
+    <div class="answerhere" style="width:100%">
+        <textarea class="txtanswer"> </textarea><br />
+        <input type="button" class="btnanswer" value="PostAnswer" onclick="PostAnswer($(this))" />
+    </div>
+}
+else
+{
+    <div>
+        <b>Please Post your Question First!</b>
+    </div>
+
+}
+<head>
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        loadAnswers();
+
+        function loadAnswers() {
+            var data = {
+                pageId: $('.hdnPageID').val()
+            };
+            $.getJSON('/ForumService.svc/loadAnswers', data, successFunc, errorFunc);
+
+            function successFunc(data) {
+                var htmlstr = "";
+                htmlstr = htmlstr + '<div><span value=' + data.d.length + '>Total Answers : <lable id="Anscnt">' + data.d.length + '</lable></span></div><br/>';
+                if (data.d.length > 0) {
+                    for (var key in data.d) {
+                        htmlstr = htmlstr + '<div><input type="hidden" name="hdnAnsId" value="' + data.d[key]["AnswerID"] + '"/><span>' + data.d[key]["AnswerID"] + ',' + data.d[key]["AnswerText"] + '</span> &nbsp;|&nbsp;<input type="button" name="deleteAns" Value="Delete Answer" onclick="DeleteAnswer($(this))"/><br></br></div>'
+                    }
+                }
+                $('.dvanswer').html('').append(htmlstr);
+            };
+
+            function errorFunc() {
+                alert('error');
+            };
+        };
+
+        function DeleteAnswer(c) {
+            var data = {
+                ansID: c.parent('div').find('input[name=hdnAnsId]').val()
+            };
+            $.getJSON('/ForumService.svc/DeleteAnswer', data, successFunc, errorFunc);
+
+            function successFunc(data) {               
+                if (data.d == true)
+                    c.parent('div').remove();
+                    var cnt = $('#Anscnt').text();
+                    cnt--;
+                    $('#Anscnt').text(cnt);
+            };
+
+            function errorFunc() {
+                alert('error');
+            };
+
+        }
+
+
+        function PostAnswer(c) {
+            if ($('.txtanswer').val().trim() != "") {
+                var data = {
+                    pageId: $('.hdnPageID').val(),
+                    answer: $('.txtanswer').val(),
+                };
+
+                $.getJSON('/ForumService.svc/PostAnswer', data, successFunc, errorFunc);
+
+                function successFunc(data) {
+                    var htmlstr = "";
+                    htmlstr = htmlstr + '<div><input type="hidden" name="hdnAnsId" value="' + data.d["AnswerID"] + '" /><span>' + data.d["AnswerID"] + ',' + data.d["AnswerText"] + '</span> &nbsp;|&nbsp;<input type="button" name="deleteAns" Value="Delete Answer" onclick="DeleteAnswer($(this))"/><br></br></div>';
+                    $('.dvanswer').append(htmlstr);
+                    var cnt = $('#Anscnt').text();
+                    cnt++;
+                    $('#Anscnt').text(cnt);
+                    $('.txtanswer').val('');
+                };
+
+                function errorFunc() {
+                    alert('error');
+                };
+            }
+        }
+
+    </script>
+</head>
