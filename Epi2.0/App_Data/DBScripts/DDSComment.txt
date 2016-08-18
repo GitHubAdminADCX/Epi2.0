@@ -9,7 +9,7 @@
 	[Boolean04] bit null,
 	[Boolean05] bit null,
 	[Integer01] int null,
-	[Integer02] int null,
+	[Integer02] int null, 
 	[Integer03] int null,
 	[Integer04] int null,
 	[Integer05] int null,

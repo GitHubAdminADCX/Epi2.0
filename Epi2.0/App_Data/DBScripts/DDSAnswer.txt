@@ -5,7 +5,7 @@
 [ItemType] nvarchar(512) not null,
 	[Boolean01] bit null,
 	[Boolean02] bit null,
-	[Boolean03] bit null,
+	[Boolean03] bit null, 
 	[Boolean04] bit null,
 	[Boolean05] bit null,
 	[Integer01] int null,
