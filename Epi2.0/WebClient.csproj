@@ -296,7 +296,6 @@
     <Folder Include="node_modules\node-sass\node_modules\sass-graph\node_modules\yargs\node_modules\read-pkg-up\node_modules\read-pkg\node_modules\normalize-package-data\node_modules\is-builtin-module\node_modules\" />
     <Folder Include="node_modules\node-sass\node_modules\sass-graph\node_modules\yargs\node_modules\read-pkg-up\node_modules\read-pkg\node_modules\normalize-package-data\node_modules\validate-npm-package-license\node_modules\" />
     <Folder Include="Views\MenuTree\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="Views\TreeView\" />
   </ItemGroup>
   <ItemGroup>
@@ -10202,6 +10201,7 @@
     <Content Include="node_modules\node-sass\vendor\win32-ia32-11\binding.node" />
     <Content Include="node_modules\node-sass\vendor\win32-x64-46\binding.node" />
     <Content Include="node_modules\node\package.json" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
