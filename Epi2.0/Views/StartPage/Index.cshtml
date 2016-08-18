@@ -1,0 +1,13 @@
+﻿@using WebClient.Models.Pages
+@using WebClient.Models.ViewModels
+
+@model PageViewModel<StartPageType>
+
+    @{
+        ViewBag.Title = "StartPage";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>StartPage</h2>
+
+    @Html.PropertyFor(x => x.CurrentPage.MainBody)

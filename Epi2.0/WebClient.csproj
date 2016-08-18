@@ -253,6 +253,7 @@
     <Compile Include="Controllers\RssPageController.cs" />
     <Compile Include="Controllers\SiteConfig.cs" />
     <Compile Include="Controllers\SiteMap.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
     <Compile Include="Controllers\XMLClassSerializer.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
@@ -277,6 +278,7 @@
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\RssPage.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
+    <Compile Include="Models\Pages\StartPageType.cs" />
     <Compile Include="Models\Pages\ValidationPreviewRenderer.cs" />
     <Compile Include="Models\ViewModels\BlockViewModel.cs" />
     <Compile Include="Models\ViewModels\CommentViewmodel.cs" />
@@ -10202,6 +10204,7 @@
     <Content Include="node_modules\node-sass\vendor\win32-x64-46\binding.node" />
     <Content Include="node_modules\node\package.json" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
