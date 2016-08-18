@@ -8,6 +8,19 @@ using System.Web;
 
 namespace WebClient.Business.Entities.DDS
 {
+
+    ///FRM010
+    /// Author:Amol Pawar
+    ///Purpose of the Class :Generic Functionality(block) to Comment on any type of page with the use of CommentBlock.
+    ///Dependent entities : CommentBlock, Pagetype where block can be render,CommentBlockController,Comment.cs,CommentViewModel.cs,DDSComment,CommentService.svc
+    ///How to use: 1. Create blockType, controller for block and its view.
+    ///            2. Add contentArea in page where we can render this block.
+    ///            3. Create DDS table and its class to map the DDS table(Comment.cs)
+    ///            4. Create Service to implement the module's logic(CommentService.svc),Check the end points created in web.config, if require do changes in web.config as needed under <system.serviceModel>
+
+    ///Points to take care: 
+    ///Highlight Risk : <Highlight risk if any involved>
+    ///Comments: <Any comment meant for the developer>
     [EPiServerDataTable(TableName = "tblBigTableComment")]
     [EPiServerDataStore(AutomaticallyCreateStore = true, AutomaticallyRemapStore = true, StoreName = "CommentStore")]
     public class Comment : IDynamicData

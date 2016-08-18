@@ -309,6 +309,7 @@
     <Folder Include="Views\TreeView\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DBScript\DDSAnswer.txt" />
     <Content Include="App_Data\DBScript\DDSComment.txt" />
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
