@@ -228,6 +228,8 @@ ModelManifest.xml
 # License file
 License.config
 
+/packages/*
+/nupkg*
 !packages/repositories.config
 
 

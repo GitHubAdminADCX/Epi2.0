@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services
 {
+    //This is a sample standard service
     public class StandardService : IStandardService
     {
         public string SayHello()
