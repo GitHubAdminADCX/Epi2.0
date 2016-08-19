@@ -230,5 +230,7 @@ ModelManifest.xml
 # License file
 License.config
 
+/packages/
+!packages/repositories.config
 
 
