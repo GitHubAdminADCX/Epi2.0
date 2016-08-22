@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services.Infrastructure
 {   
+    //This is a standard inteface for service
     public interface IStandardService
     {
         string SayHello();       
