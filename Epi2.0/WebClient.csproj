@@ -279,6 +279,7 @@
     <Compile Include="Models\Blocks\MenuTree.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -300,7 +301,6 @@
     <Compile Include="Views\Blocks\DefaultBlock1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\MenuTree\" />
     <Folder Include="Views\TreeView\" />
@@ -316,8 +316,8 @@
     <Content Include="GruntFile.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="Static\css\Editor.css" />
-    <Content Include="templates\footer.html" />
-    <Content Include="templates\header.html" />
+    <Content Include="ui\templates\footer.html" />
+    <Content Include="ui\templates\header.html" />
     <Content Include="ui\background-learner.png" />
     <Content Include="ui\css\master.css" />
     <Content Include="ui\grunt-config\aliases.js" />
