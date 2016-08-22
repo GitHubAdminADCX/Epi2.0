@@ -379,6 +379,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\Forum\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\ST.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
