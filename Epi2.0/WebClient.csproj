@@ -246,6 +246,7 @@
     <Compile Include="CommentService.svc.cs">
       <DependentUpon>CommentService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -254,6 +255,7 @@
     <Compile Include="Controllers\MenuTreeController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Controllers\QuestionnaireController.cs" />
     <Compile Include="Controllers\RssPageController.cs" />
     <Compile Include="Controllers\SiteConfig.cs" />
     <Compile Include="Controllers\SiteMap.cs" />
@@ -278,6 +280,7 @@
     <Compile Include="Models\Blocks\LoginBlock.cs" />
     <Compile Include="Models\Blocks\MailBlock.cs" />
     <Compile Include="Models\Blocks\MenuTree.cs" />
+    <Compile Include="Models\Blocks\QuestionsBlockType.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
@@ -286,6 +289,7 @@
     </Compile>
     <Compile Include="Models\Pages\Forum.cs" />
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
+    <Compile Include="Models\Pages\QuationnairePageType.cs" />
     <Compile Include="Models\Pages\RssPage.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\Pages\StartPageType.cs" />
@@ -425,6 +429,8 @@
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\Forum\Index.cshtml" />
     <None Include="Properties\PublishProfiles\ST.pubxml" />
+    <Content Include="Views\Questionnaire\Index.cshtml" />
+    <Content Include="Views\Question\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

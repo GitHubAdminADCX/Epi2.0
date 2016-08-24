@@ -99,7 +99,7 @@ body {
 /* Banner Image*/
 .business-header {
   height: 650px;
-  /*background: url("../background-learner.png") center center no-repeat scroll;*/
+  background: url("../background-learner.png") center center no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

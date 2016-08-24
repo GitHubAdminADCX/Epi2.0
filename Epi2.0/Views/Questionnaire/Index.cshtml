@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Questionnaire Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebClient.Models.Pages
+@using WebClient.Models.ViewModels
+
+@model PageViewModel<QuationnairePageType>
+
+@Html.PropertyFor(x => x.CurrentPage.Description)
+@Html.PropertyFor(x => x.CurrentPage.Questions)
+<input name="Submit" value="Submit" type="button"/>

@@ -1,0 +1,43 @@
+﻿@using WebClient.Models.Blocks
+@using WebClient.Models.ViewModels
+@using EPiServer.ServiceLocation
+@using EPiServer.Web.Routing
+@model QuestionsBlockType
+
+<div id="@Html.PropertyFor(x=>x.BlockId)">
+    <div>     
+        @Html.PropertyFor(x=>x.Questions)
+        @Html.HiddenFor(x=>x.CorrectAnswer)
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img src="@Url.ContentUrl(Model.AnswerOption1Image)" height="200" width="150" />
+                <br />
+                @Html.RadioButton("Answer1", false)
+                @Html.PropertyFor(x => x.AnswerOption1)
+            </td>
+            <td>
+                <img src="@Url.ContentUrl(Model.AnswerOption2Image)" height="200" width="150" />
+                <br />
+                @Html.RadioButton("Answer2", false)
+                @Html.PropertyFor(x => x.AnswerOption2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="@Url.ContentUrl(Model.AnswerOption3Image)" height="200" width="150" />
+                <br />
+                @Html.RadioButton("Answer3",false)
+                @Html.PropertyFor(x => x.AnswerOption3)
+            </td>
+            <td>
+                <img src="@Url.ContentUrl(Model.AnswerOption4Image)" height="200" width="150" />
+                <br />
+                @Html.RadioButton("Answer4", false)
+                @Html.PropertyFor(x => x.AnswerOption4)
+            </td>
+        </tr>
+    </table>
+</div>
