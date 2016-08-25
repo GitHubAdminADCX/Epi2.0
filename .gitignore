@@ -231,9 +231,4 @@ ModelManifest.xml
 # License file
 License.config
 
-/packages/
-!packages/repositories.config
-/EllevioWeb/styles/css/main.css.map
-/EllevioWeb/Logs
-
 
