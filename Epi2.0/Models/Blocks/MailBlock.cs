@@ -6,7 +6,6 @@ using EPiServer.DataAnnotations;
 
 namespace WebClient.Models.Blocks
 {
-    //ID :FRM028
     [ContentType(DisplayName = "MailBlock", GUID = "aa374621-45b6-4cea-b347-73203ba5f7c5", Description = "")]
     public class MailBlock : BlockData
     {
@@ -17,9 +16,8 @@ namespace WebClient.Models.Blocks
 
         
         [Display(Name = "Send To",
-        Description = "This is a custome property.",
+        Description = "A block that lists latest books.",
         Order = 1)]
-        [UIHint("CustomProperty")]
         public virtual string SendTo { get; set; }
     }
 }
