@@ -309,6 +309,9 @@
   <ItemGroup>
     <Content Include="App_Data\DBScripts\DDSAnswer.txt" />
     <Content Include="App_Data\DBScripts\DDSComment.txt" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolcommand.js" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolmaintoolbar.js" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolview.js" />
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
