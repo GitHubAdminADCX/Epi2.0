@@ -1,23 +1,13 @@
 {
-  "name": "episerver",
+  "name": "Episerver",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-contrib-sass": "^0.9.2",
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
     "grunt-replace": "*",
-    "grunt-sass": "^1.2.1",
+    "grunt-sass": "*",
     "grunt-shell": "*",
     "load-grunt-config": "*",
-    "load-grunt-tasks": "^3.5.2",
     "node-sass": "^3.2.0"
-  },
-  "main": "GruntFile.js",
-  "dependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
