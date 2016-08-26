@@ -316,6 +316,7 @@
     <Folder Include="Amey\js\" />
     <Folder Include="Amey\partials\" />
     <Folder Include="Amey\templates\" />
+    <Folder Include="ClientResources\Scripts\CustomProperty\templates\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="scripts\" />
     <Folder Include="Views\MenuTree\" />
@@ -376,8 +377,8 @@
     <Content Include="ForumService.svc" />
     <Content Include="GruntFile.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
-    <Content Include="public\stylesheets\style.css" />
     <None Include="sass\style.scss" />
+    <Content Include="public\stylesheets\style.css" />
     <Content Include="Static\css\Editor.css" />
     <Content Include="templates\footer.html" />
     <Content Include="templates\header.html" />
