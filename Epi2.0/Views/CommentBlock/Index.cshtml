@@ -3,52 +3,68 @@
 @using EPiServer.ServiceLocation
 @using EPiServer.Web.Routing
 @model CommentViewModel
-
-<div>
-    <span>Comment Block</span><br />
-    <span>Post comment here...</span>
-</div>
-<div class="maindv">
-    @foreach (var item in Model.Comments)
-    {
-        <div style="width:100%" class="dvcomments">
-            @item.CommentText 
-            <input type="hidden" name="ParentcommentId" value="@item.CommentId" />
-            <input type="button" class="btnreply" value="Reply" onclick="Reply($(this))" />
-            <div class="dvReply" style="width:100%;">
-                <div class="childcomments" style="width:100%">
-                </div>
-                <div>
-                    <div class="Addchildcomments">
-                        <input type="hidden" name="commentId" value="@item.CommentId" />
-                        <input type="hidden" name="pageId" value="@Model.pageId" />
-                        <input type="hidden" name="urlstring" value="@Model.pageURl" />
-                        <textarea name="commentText"></textarea>
-                        @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
-                        <input id="AddChildComment" type="submit" value="AddComment" onclick="AddComment($(this))" />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+               Comment Block
+                <small>Epi Chat</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="active">Please Comment</li>
+            </ol>
+            <div class="maindv well">
+                @foreach (var item in Model.Comments)
+                {
+                    <div style="width:100%" class="dvcomments">
+                        @item.CommentText
+                        <input type="hidden" name="ParentcommentId" value="@item.CommentId" />
+                        <input type="button" class="btnreply" value="Reply" onclick="Reply($(this))" />
+                        <div class="dvReply" style="width:100%;">
+                            <div class="childcomments" style="width:100%">
+                            </div>
+                            <div>
+                                <div class="Addchildcomments">
+                                    <input type="hidden" name="commentId" value="@item.CommentId" />
+                                    <input type="hidden" name="pageId" value="@Model.pageId" />
+                                    <input type="hidden" name="urlstring" value="@Model.pageURl" />
+                                    <textarea name="commentText"></textarea>
+                                    @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
+                                    <input id="AddChildComment" type="submit" value="AddComment" onclick="AddComment($(this))" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
+            </div>
+            <div class="Addchildcomments">
+                <input type="hidden" name="commentId" value="" />
+                <input type="hidden" name="pageId" value="@Model.pageId" />
+                <input type="hidden" name="urlstring" value="@Model.pageURl" />
+                <textarea name="commentText"></textarea>
+                @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
+                <input id="AddComment"  class="btn btn-primary btnanswer" type="submit" value="AddComment" onclick="AddComment($(this))" />
             </div>
         </div>
-    }
+    </div>
 </div>
+
 @*@using (Html.BeginForm("Addcomment", "CommentBlock", FormMethod.Post))
 {*@
 
-    <div class="Addchildcomments">
-        <input type="hidden" name="commentId" value="" />
-        <input type="hidden" name="pageId" value="@Model.pageId" />
-        <input type="hidden" name="urlstring" value="@Model.pageURl" />
-        <textarea name="commentText"></textarea>
-        @*@Html.TextArea("commentText", new { rows = 10, columns = 40 })*@
-        <input id="AddComment" type="submit" value="AddComment" onclick="AddComment($(this))" />
-    </div>
+
 
 @*}*@
 
 
 <head>
     <script src="~/js/jquery-1.10.2.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
     <script type="text/javascript">
         $('.dvReply').hide();
 
