@@ -13,19 +13,28 @@
     <title>Article Page</title>
 </head>
 <body>
+    <style>
+        .testUL {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    </style>
+
     <div>
-        @Html.PropertyFor(x => x.MainBody)
-       
-        <div class="container">
-            @if (Model != null && Model.LinksList != null && Model.LinksList.LinksList != null && Model.LinksList.LinksList.Count > 0)
+        @Html.DisplayFor(x => x.articlePage.MainBody);
+        <br />
+        <div>
+            @if (Model != null && Model.LinksList != null && Model.LinksList.LinksList != null && Model.LinksList.LinksList.Count() > 0)
             {
                 foreach (var link in Model.LinksList.LinksList)
                 {
-                    <ul class="link-list footer-links">
+                    <ul class="testUL">
                         <li>
-                            <a target="_blank" rel="external" href="@link.Link" class="external-link" style="icon:@link.Image">
+                            | <a target="_blank" href="http://@link.Link">
                                 <span>@link.LinkText</span>
-                            </a>
+                            </a> |
                         </li>
                     </ul>
                 }

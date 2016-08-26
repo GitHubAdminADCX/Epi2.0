@@ -9,6 +9,10 @@ using WebClient.Models.ViewModels;
 
 namespace WebClient.Models.Blocks
 {
+    /*  FRM016
+            Author: Snehal Jadhav
+            /// How to use: Add this js file in the UIHint property in page type or block type.   
+    */
     [ContentType(DisplayName = "LinkPropertyBlock", GUID = "ddcbc426-a750-4a18-aed0-cd15a1037821", Description = "")]
     public class LinkPropertyBlock : BlockData
     {

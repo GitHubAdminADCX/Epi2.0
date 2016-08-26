@@ -5,8 +5,11 @@ using System.Web;
 
 namespace WebClient.Models.ViewModels
 {
+    /*  FRM016
+        Author: Snehal Jadhav
+    */
     public class LinksViewModel
     {
-        public IEnumerable<LinkDetails> LinksList { get; set; }
+        public List<LinkDetails> LinksList { get; set; }
     }
 }
