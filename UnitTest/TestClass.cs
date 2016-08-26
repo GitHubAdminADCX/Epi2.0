@@ -1,4 +1,4 @@
-﻿//using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +10,16 @@ using Services.Infrastructure;
 
 namespace UnitTest
 {
-    //[TestFixture]
+    [TestFixture]
     public class TestClass
     {
-        //[Test]
-        //public void testSayHello()
-        //{
-        //    StandardService service = new StandardService();
-        //    var result  = service.SayHello();
-        //    Assert.AreEqual(result, "Hello World");
-        //}
+        [Test]
+        public void testSayHello()
+        {
+            StandardService service = new StandardService();
+            var result = service.SayHello();
+            Assert.AreEqual(result, "Hello World");
+        }
 
         //[Test]
         //public void testService()
