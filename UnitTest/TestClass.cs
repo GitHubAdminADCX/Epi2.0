@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WCF;
-//using Moq;
+using Moq;
 using Services.Infrastructure;
 
 namespace UnitTest
@@ -21,13 +21,13 @@ namespace UnitTest
             Assert.AreEqual(result, "Hello World");
         }
 
-        //[Test]
-        //public void testService()
-        //{
-        //    Mock<IStandardService> serviceContainer = new Mock<IStandardService>();           
-        //    serviceContainer.Setup(x => x.SayHello()).Returns("Hello World");
-        //    IStandardService service = serviceContainer.Object;
-        //    Assert.AreEqual(service.SayHello(), "Hello World");
-        //}
+        [Test]
+        public void testService()
+        {
+            Mock<IStandardService> serviceContainer = new Mock<IStandardService>();
+            serviceContainer.Setup(x => x.SayHello()).Returns("Hello World");
+            IStandardService service = serviceContainer.Object;
+            Assert.AreEqual(service.SayHello(), "Hello World");
+        }
     }
 }
