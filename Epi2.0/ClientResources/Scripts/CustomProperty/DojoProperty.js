@@ -57,7 +57,7 @@ function (
                 var check = regex.test(this.value);
                 if (check == false) {
                     $("#test").remove();
-                    $("#txtvalid").after('<div id="test" style="float:right;margin-right:1250px"> Hi </div>');
+                    $("#txtvalid").after('<div id="test" style="float:right;margin-right:1100px;color:red;"> Please Enter Valid Email</div>');
 
                 } else {
                     $("#test").remove();

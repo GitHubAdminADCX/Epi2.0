@@ -18,6 +18,7 @@ namespace WebClient.Models.Blocks
         [Display(Name = "Send To",
         Description = "A block that lists latest books.",
         Order = 1)]
+        [UIHint("CustomProperty")]
         public virtual string SendTo { get; set; }
     }
 }
