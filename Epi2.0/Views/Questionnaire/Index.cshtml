@@ -1,14 +1,23 @@
 
 @{
     ViewBag.Title = "Questionnaire Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="~/ui/css/master.css" rel="stylesheet" />
+    @*<script type="text/javascript" src="~/Views/Questionnaire/JavaScript.js"></script>*@
+  
+</head>
 @using WebClient.Models.Pages
 @using WebClient.Models.ViewModels
 
 @model PageViewModel<QuationnairePageType>
 
-@Html.PropertyFor(x => x.CurrentPage.Description)
+@*@Html.PropertyFor(x => x.CurrentPage.Description)*@
 @Html.PropertyFor(x => x.CurrentPage.Questions)
-<input name="Submit" value="Submit" type="button"/>
+@*<input name="Submit" value="Submit" type="button"/>*@
+
