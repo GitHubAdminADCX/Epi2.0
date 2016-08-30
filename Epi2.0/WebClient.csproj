@@ -427,6 +427,7 @@
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
     <Content Include="Util\Editor\tinymce\plugins\PasteUnformatted\editor_plugin.js" />
     <Content Include="js\jquery.validate.min.js" />
+    <Content Include="Views\Questionnaire\JavaScript.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">

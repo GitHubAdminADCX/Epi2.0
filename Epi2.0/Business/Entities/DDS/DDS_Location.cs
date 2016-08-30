@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WebClient.Business.Entities.DDS
 {
+    ////FRM023
     [EPiServerDataTable(TableName = "tblBigTableLocation")]
     [EPiServerDataStore(AutomaticallyCreateStore = true, AutomaticallyRemapStore = true, StoreName = "Epi")]
     class DDS_Location
