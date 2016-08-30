@@ -1,0 +1,42 @@
+﻿@-webkit-keyframes disqus-threadOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes disqus-threadOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disqus-threadOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+div#disqus_thread {
+    -webkit-animation: disqus-threadOpacity 1.5s forwards linear;
+    -moz-animation: disqus-threadOpacity 1.5s forwards linear;
+    -o-animation: disqus-threadOpacity 1.5s forwards linear;
+    animation: disqus-threadOpacity 1.5s forwards linear;
+}
+
+div#disqus_thread:empty:before, .disqus-disabledMessage {
+    display: block;
+    border: #d2691e 1px solid;
+    padding: 10px;
+}
