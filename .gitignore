@@ -6,7 +6,6 @@
 /Epi2.0/obj/Debug
 /.vs
 *.pdb
-*.txt
 *.cache
 */IoC/obj/Debug/*
 */Services/obj/Debug/*
