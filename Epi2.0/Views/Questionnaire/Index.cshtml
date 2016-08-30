@@ -6,9 +6,13 @@
 
 @using WebClient.Models.Pages
 @using WebClient.Models.ViewModels
+@using Services.PageModel
 
-@model PageViewModel<QuationnairePageType>
+@model PageViewModel<QuestionnairePageType>
 
 @Html.PropertyFor(x => x.CurrentPage.Description)
 @Html.PropertyFor(x => x.CurrentPage.Questions)
+@Html.PropertyFor(x => x.CurrentPage.Form)
+
+@Html.HiddenFor(x=>x.CurrentPage.PageId)
 <input name="Submit" value="Submit" type="button"/>

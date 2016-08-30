@@ -9,6 +9,7 @@ using EPiServer.Web;
 using EPiServer.Web.Mvc;
 using WebClient.Models.Blocks;
 using WebClient.Models.ViewModels;
+using Services.BlockModel;
 
 namespace WebClient.Controllers
 {
