@@ -6,6 +6,9 @@ using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
 using Epi2._0.Models.Custom.Attributes;
 using EPiServer;
+using EPiServer.Shell.ObjectEditing;
+using WebClient.HelperClass;
+using EPiServer.Web;
 
 namespace WebClient.Models.Pages
 {
@@ -13,13 +16,13 @@ namespace WebClient.Models.Pages
     public class ValidationPreviewRenderer:PageData
     {
 
-        //[Display(
-        //   Name = "Main body",
-        //   Description = "",
-        //   GroupName = SystemTabNames.Content,
-        //   Order = 1)]
-        //// [ValidationProperty]
-        //public virtual XhtmlString MainBody { get; set; }
+        [Display(
+           Name = "Main body",
+           Description = "",
+           GroupName = SystemTabNames.Content,
+           Order = 1)]
+        // [ValidationProperty]
+        public virtual XhtmlString MainBody { get; set; }
 
 
         [Display(
@@ -44,8 +47,37 @@ namespace WebClient.Models.Pages
              Description = "",
              GroupName = SystemTabNames.Content,
              Order = 90)]
-        [ValidationProperty]       
+        //FRM019:custom property editor 
+        [AutoSuggestSelection(typeof(MySelectionQuery), AllowCustomValues = true)]
+      //  [ValidationProperty]       
         public virtual string stringproperty { get; set; }
+
+        [CultureSpecific]
+        [Required]
+        [Display(
+               Name = "ContentReferencetest",
+               Description = "ContentReferencetest",
+               GroupName = SystemTabNames.Content,
+               Order = 9)]
+      //  [UIHint(UIHint.Image)]
+        public virtual ContentReference BannerImage { get; set; }
+
+        [Editable(true)]
+        [Display(
+          Name = "PageReferencetest",
+          Description = "PageReferencetest",
+          GroupName = SystemTabNames.Content,
+          Order = 98)]
+        public virtual PageReference NewsPagesEnglishPageReference { get; set; }
+
+        //[PageTypeProperty(EditCaption = "Tags",
+        //    Type = typeof(PropertyCategoryCheckBoxList),
+        //    HelpText = "ArticleRoot",
+        //    SortOrder = 100,
+        //    Tab = typeof(ArticlesTab))]
+        //public virtual string TagIds { get; set; }
+
+      
 
 
     }

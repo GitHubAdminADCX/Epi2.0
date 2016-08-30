@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 
 namespace WebClient.Models.Pages
 {
@@ -24,6 +25,16 @@ namespace WebClient.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 1)]
         public virtual XhtmlString MainBody { get; set; }
+
+        //FRM019:custom property editor 
+        [CultureSpecific]
+        [Display(
+          Name = "Autocomplete keywords (Please use ',' to seperate two words)",
+          Description = "Autocomplete keywords",
+          GroupName = SystemTabNames.Settings,
+          Order = 1)]
+        [UIHint(UIHint.Textarea)]
+        public virtual string Autocompletekeywords { get; set; }
 
     }
 }
