@@ -21,6 +21,10 @@ namespace WebClient
 
             routes.MapRoute("myadminplugin", "MyAdminPlugin/{action}",
             new { controller = "MyAdminPlugin", action = "Index" });
+
+            ////FRM023
+            routes.MapRoute("adminTollLocation", "AdminToolLocation/{action}",
+          new { controller = "AdminToolLocation", action = "Index" });
         }
     }
 }

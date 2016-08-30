@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebClient.Models.ViewModels
 {
+    //FRM023
     public class AdminLocation
     {
         public string CountryCode { get; set; }
