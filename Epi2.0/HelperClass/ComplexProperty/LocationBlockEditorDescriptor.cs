@@ -9,6 +9,7 @@ using WebClient.Models.Blocks;
 
 namespace WebClient.HelperClass.ComplexProperty
 {
+    //FRM023
     [EditorDescriptorRegistration(TargetType = typeof(LocationBlock))]
     class LocationBlockEditorDescriptor : EditorDescriptor
     {

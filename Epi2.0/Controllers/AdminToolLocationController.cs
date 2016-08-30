@@ -15,6 +15,7 @@ namespace WebClient.Controllers
     public class AdminToolLocationController : Controller
     {
         // GET: AdminToolLocation
+        // GET: AdminToolLocation
         public ActionResult Index()
         {
             var commentStore = DynamicDataStoreFactory.Instance.GetStore(typeof(DDS_Location));
@@ -48,15 +49,12 @@ namespace WebClient.Controllers
 
             };
             commentStore.Save(comment);
-
-
             var model = new AdminLocation()
             {
                 RegionName = "Record Saved",
 
             };
             return View("Index", model);
-
         }
     }
 }
