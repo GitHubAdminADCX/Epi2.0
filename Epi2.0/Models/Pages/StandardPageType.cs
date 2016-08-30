@@ -7,6 +7,7 @@ using EPiServer.SpecializedProperties;
 using Epi2._0.Models.Custom.Attributes;
 using EPiServer;
 using WebClient.Models.Blocks;
+using EPiServer.Web;
 
 namespace WebClient.Models.Pages
 {
