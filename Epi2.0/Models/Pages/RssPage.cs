@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using WebClient.Models.Blocks;
 
 namespace WebClient.Models.Pages
 {
@@ -16,5 +17,7 @@ namespace WebClient.Models.Pages
          Description = "",
          Order = 1)]
         public virtual PageReference ParentPage { get; set; }
+
+        public virtual LocationBlock Location { get; set; }
     }
 }

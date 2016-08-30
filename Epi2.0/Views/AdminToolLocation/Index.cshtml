@@ -1,0 +1,41 @@
+﻿
+@using WebClient.Models.ViewModels;
+@model AdminLocation
+
+
+
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Model.RegionName
+
+
+        @using (Html.BeginForm("AddLocation", "AdminToolLocation", FormMethod.Post))
+        {
+            <div>
+            
+                RegionName : @Html.TextArea("location", new { rows = 2, columns = 60 })
+                RegionCode : @Html.TextArea("RegionCode", new { rows = 2, columns = 60 })
+                CountryCode : @Html.TextArea("CountryCode", new { rows = 2, columns = 60 })
+                CountryName : @Html.TextArea("CountryName", new { rows = 2, columns = 60 })
+                <br />
+                <input id="btnSave" type="submit" value="Save" />
+            </div>
+        }
+    </div>
+
+</body>
+</html>
+
+

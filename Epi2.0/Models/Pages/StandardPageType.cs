@@ -4,7 +4,9 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
-using EPiServer.Web;
+using Epi2._0.Models.Custom.Attributes;
+using EPiServer;
+using WebClient.Models.Blocks;
 
 namespace WebClient.Models.Pages
 {
@@ -24,6 +26,7 @@ namespace WebClient.Models.Pages
             Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
             GroupName = SystemTabNames.Content,
             Order = 1)]
+        [ValidationProperty]
         public virtual XhtmlString MainBody { get; set; }
 
         //FRM019:custom property editor 

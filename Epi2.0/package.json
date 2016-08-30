@@ -1,0 +1,13 @@
+{
+  "name": "Episerver",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-replace": "*",
+    "grunt-sass": "*",
+    "grunt-shell": "*",
+    "load-grunt-config": "*",
+    "node-sass": "^3.2.0"
+  }
+}

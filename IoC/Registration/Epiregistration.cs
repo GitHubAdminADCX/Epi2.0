@@ -22,11 +22,13 @@ namespace IoC.Registration
         public void RegisterRepositories(Container container)
         {
             container.RegisterSingleton<IStandardService, StandardService>();
+            container.RegisterSingleton<IQuestionnaireService, QuestionnaireService>();
         }
 
         public void RegisterServices(Container container)
         {   
             container.RegisterSingleton<IStandardService, StandardService>();
+            container.RegisterSingleton<IQuestionnaireService, QuestionnaireService>();
         }        
     }
 }
