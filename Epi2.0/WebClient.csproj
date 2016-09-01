@@ -238,6 +238,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Business\Entities\DDS\Comment.cs" />
+    <Compile Include="Business\Entities\DDS\DDS_Location.cs" />
+    <Compile Include="Business\Entities\DDS\DDS_Mail.cs" />
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
@@ -251,10 +253,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HelperClass\ComplexProperty\Country.cs" />
+    <Compile Include="HelperClass\ComplexProperty\CountrySelectionFactory.cs" />
+    <Compile Include="HelperClass\ComplexProperty\LocationBlockEditorDescriptor.cs" />
+    <Compile Include="HelperClass\ComplexProperty\Region.cs" />
+    <Compile Include="HelperClass\ComplexProperty\RegionSelectionFactory.cs" />
     <Compile Include="HelperClass\DividerProperty.cs" />
+    <Compile Include="HelperClass\DojoPropertyDescriptor.cs" />
+    <Compile Include="HelperClass\MailHelper.cs" />
+    <Compile Include="HelperClass\MySelectionQuery.cs" />
     <Compile Include="HelperClass\PropertyEditorDescriptor.cs" />
     <Compile Include="HelperClass\RSSResult.cs" />
     <Compile Include="Models\Blocks\CommentBlock.cs" />
+    <Compile Include="Models\Blocks\LocationBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\LoginModel.cs" />
@@ -275,9 +286,6 @@
     <Compile Include="Views\Blocks\DefaultBlock1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Customization\" />
-    <Folder Include="Business\" />
-    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
     <Folder Include="Views\Shared\" />
