@@ -53,6 +53,22 @@
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ComponentArt.Silverlight.Server, Version=2010.1.2637.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Silverlight.Server.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentArt.Web.Visualization.Charting, Version=2010.1.2637.2, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Web.Visualization.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentArt.Web.Visualization.Charting.Shader, Version=2010.1.2637.2, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Web.Visualization.Charting.Shader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EFExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EFExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -67,6 +83,30 @@
     </Reference>
     <Reference Include="EPiServer.ApplicationModules, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.ApplicationModules.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.AggregationContract, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.AggregationContract.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.Cms, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Cms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.Core, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.Gadgets, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Gadgets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.Trace, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Trace.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Cmo.UI, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EPiServer.Cms.Shell.UI, Version=9.4.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
@@ -296,6 +336,8 @@
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="modules\_protected\CMO\CMLiveMonitor.aspx" />
+    <Content Include="modules\_protected\CMO\Views\LiveMonitor\Index.ascx" />
     <Content Include="Static\css\Editor.css" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\editor_plugin.js" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
@@ -329,6 +371,7 @@
     <Content Include="Views\CommentBlock\Index.cshtml" />
     <Content Include="Views\Login\LoginBlock.cshtml" />
     <Content Include="Views\RssPage\Index.cshtml" />
+    <Content Include="modules\_protected\CMO\module.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
