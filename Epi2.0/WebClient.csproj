@@ -53,20 +53,12 @@
       <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ComponentArt.Silverlight.Server, Version=2010.1.2637.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Silverlight.Server.dll</HintPath>
+    <Reference Include="Duk.EPiServer.Disqus, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Duk.EPiServer.Disqus.1.3.0\lib\net45\Duk.EPiServer.Disqus.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ComponentArt.Web.Visualization.Charting, Version=2010.1.2637.2, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Web.Visualization.Charting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ComponentArt.Web.Visualization.Charting.Shader, Version=2010.1.2637.2, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\ComponentArt.Web.Visualization.Charting.Shader.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EFExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EFExtensions.dll</HintPath>
+    <Reference Include="Duk.EPiServer.Disqus.UI, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Duk.EPiServer.Disqus.UI.1.3.0\lib\net45\Duk.EPiServer.Disqus.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -77,76 +69,52 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.dll</HintPath>
+    <Reference Include="EPiServer, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.ApplicationModules, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.ApplicationModules.dll</HintPath>
+    <Reference Include="EPiServer.ApplicationModules, Version=7.5.394.2, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.ApplicationModules.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Cms.Shell.UI, Version=9.9.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.9.1\lib\net45\EPiServer.Cms.Shell.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.AggregationContract, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.AggregationContract.dll</HintPath>
+    <Reference Include="EPiServer.Configuration, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.Cms, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Cms.dll</HintPath>
+    <Reference Include="EPiServer.Data, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.Core, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Core.dll</HintPath>
+    <Reference Include="EPiServer.Data.Cache, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Data.Cache.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.Gadgets, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Gadgets.dll</HintPath>
+    <Reference Include="EPiServer.Enterprise, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.Enterprise.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.Trace, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.Trace.dll</HintPath>
+    <Reference Include="EPiServer.Events, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Events.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cmo.UI, Version=7.7.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Cmo.7.7.1.0\lib\net45\EPiServer.Cmo.UI.dll</HintPath>
+    <Reference Include="EPiServer.Framework, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Cms.Shell.UI, Version=9.4.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.4.3\lib\net45\EPiServer.Cms.Shell.UI.dll</HintPath>
+    <Reference Include="EPiServer.ImageLibrary, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.ImageLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Configuration, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.Configuration.dll</HintPath>
+    <Reference Include="EPiServer.Licensing, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Licensing.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Data, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.Data.Cache, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Data.Cache.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.Enterprise, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.Enterprise.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.Events, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Events.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.Framework, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.ImageLibrary, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.ImageLibrary.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.Licensing, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Licensing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EPiServer.LinkAnalyzer, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.LinkAnalyzer.dll</HintPath>
+    <Reference Include="EPiServer.LinkAnalyzer, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.LinkAnalyzer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EPiServer.LiveMonitor, Version=8.3.1.9000, Culture=neutral, processorArchitecture=MSIL">
@@ -157,36 +125,52 @@
       <HintPath>..\packages\EPiServer.Logging.Log4Net.2.0.0\lib\net45\EPiServer.Logging.Log4Net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Packaging, Version=3.2.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Packaging.3.2.3\lib\net45\EPiServer.Packaging.dll</HintPath>
+    <Reference Include="EPiServer.Packaging, Version=3.2.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Packaging.3.2.4\lib\net45\EPiServer.Packaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EPiServer.Packaging.CmdAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Packaging.3.2.3\lib\net45\EPiServer.Packaging.CmdAPI.dll</HintPath>
+      <HintPath>..\packages\EPiServer.Packaging.3.2.4\lib\net45\EPiServer.Packaging.CmdAPI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Packaging.UI, Version=3.2.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Packaging.UI.3.2.3\lib\net45\EPiServer.Packaging.UI.dll</HintPath>
+    <Reference Include="EPiServer.Packaging.UI, Version=3.2.4.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Packaging.UI.3.2.4\lib\net45\EPiServer.Packaging.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Shell, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.Framework.9.7.3\lib\net45\EPiServer.Shell.dll</HintPath>
+    <Reference Include="EPiServer.Shell, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Framework.9.12.1\lib\net45\EPiServer.Shell.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Shell.UI, Version=9.4.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.4.3\lib\net45\EPiServer.Shell.UI.dll</HintPath>
+    <Reference Include="EPiServer.Shell.UI, Version=9.9.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.9.1\lib\net45\EPiServer.Shell.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.UI, Version=9.4.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.4.3\lib\net45\EPiServer.UI.dll</HintPath>
+    <Reference Include="EPiServer.Social, Version=2.1.4.9000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Social.2.1.4.9000\lib\net40\EPiServer.Social.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.Web.WebControls, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.Web.WebControls.dll</HintPath>
+    <Reference Include="EPiServer.Social.Configuration, Version=2.1.4.9000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Social.2.1.4.9000\lib\net40\EPiServer.Social.Configuration.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EPiServer.XForms, Version=9.7.3.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPiServer.CMS.Core.9.7.3\lib\net45\EPiServer.XForms.dll</HintPath>
+    <Reference Include="EPiServer.Social.Models, Version=2.1.4.9000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Social.2.1.4.9000\lib\net40\EPiServer.Social.Models.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Social.Providers, Version=2.1.4.9000, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.Social.2.1.4.9000\lib\net40\EPiServer.Social.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.UI, Version=9.9.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.UI.Core.9.9.1\lib\net45\EPiServer.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.Web.WebControls, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.Web.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPiServer.XForms, Version=9.12.1.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPiServer.CMS.Core.9.12.1\lib\net45\EPiServer.XForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -249,6 +233,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -305,9 +290,13 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Business\Entities\DDS\Answer.cs" />
     <Compile Include="Business\Entities\DDS\Comment.cs" />
     <Compile Include="Business\Entities\DDS\DDS_Location.cs" />
     <Compile Include="Business\Entities\DDS\DDS_Mail.cs" />
+    <Compile Include="CommentService.svc.cs">
+      <DependentUpon>CommentService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
@@ -318,6 +307,9 @@
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="ForumService.svc.cs">
+      <DependentUpon>ForumService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -360,17 +352,60 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DBScript\DDSComment.txt" />
+    <Content Include="App_Readme\Elmah.txt" />
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
+    <Content Include="CommentService.svc" />
+    <Content Include="ForumService.svc" />
     <Content Include="js\jquery-1.10.2.min.js" />
-    <Content Include="modules\_protected\CMO\CMLiveMonitor.aspx" />
-    <Content Include="modules\_protected\CMO\Views\LiveMonitor\Index.ascx" />
+    <Content Include="modules\Duk.EPiServer.Disqus\ClientResources\DisqusBlockIcon.png" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AdminLinks.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AreaSettings.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AreaSettingsViewModel.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\DisqusInitializer.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\DisqusResources.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\EditMode.css" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\GeneralSettings.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\GeneralSettingsViewModel.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\main.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\nls\Settings.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\nls\sv\Settings.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\NotificationList.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\PreviewMode.css" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\RootContainer.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\Settings.css" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\SettingsSection.js" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\templates\AdminLinks.htm" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\templates\AreaSettings.htm" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\templates\GeneralSettings.htm" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\templates\SettingsSection.htm" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\_OperationNotifier.js" />
     <Content Include="modules\_protected\EPiServer.LiveMonitor\web.config" />
     <Content Include="modules\_protected\EPiServer.LiveMonitor\module.config" />
     <Content Include="modules\_protected\EPiServer.LiveMonitor\LiveMonitor.config" />
     <Content Include="modules\_protected\EPiServer.LiveMonitor\EPiServer.LiveMonitor.zip" />
+    <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
+    <Content Include="modules\_protected\Shell\web.config" />
+    <Content Include="modules\_protected\Shell\Shell.zip" />
+    <Content Include="modules\_protected\CMS\web.config" />
+    <Content Include="modules\_protected\CMS\CMS.zip" />
+    <Content Include="modules\Duk.EPiServer.Disqus\module.config" />
+    <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\module.config" />
+    <Content Include="modules\_protected\EPiServer.Forms.UI\EPiServer.Forms.UI.zip" />
+    <Content Include="modules\_protected\EPiServer.Forms\EPiServer.Forms.zip" />
+    <Content Include="modules\_protected\EPiServer.Forms\Forms.config" />
+    <Content Include="modules\_protected\EPiServer.Forms\Views\ElementBlocks\Web.config" />
+    <Content Include="modules\_protected\EPiServer.Social\EPiServer.Social.zip" />
+    <Content Include="modules\_protected\EPiServer.Social\EPiServerSocial.config" />
+    <Content Include="modules\_protected\EPiServer.Social\module.config" />
+    <Content Include="modules\_protected\EPiServer.Social\Views\Web.config" />
+    <Content Include="modules\_protected\EPiServer.Social\web.config" />
+    <Content Include="package.json" />
+    <Content Include="sass\style.scss" />
+    <Content Include="modules\_protected\repository.config" />
     <None Include="scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="public\stylesheets\style.css" />
     <Content Include="scripts\jquery-1.6.4.js" />
     <Content Include="scripts\jquery-1.6.4.min.js" />
     <Content Include="scripts\jquery.signalR-2.0.3.js" />
@@ -388,15 +423,6 @@
     <Content Include="App_Data\GeoLiteCity.dat" />
     <None Include="EPiServerLog.config" />
     <Content Include="packages.config" />
-    <Content Include="modules\_protected\Shell\web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="modules\_protected\Shell\Shell.zip" />
-    <Content Include="modules\_protected\CMS\web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="modules\_protected\CMS\CMS.zip" />
-    <Content Include="modules\_protected\EPiServer.Packaging.UI\web.config" />
     <Content Include="modules\_protected\EPiServer.Packaging.UI\EPiServer.Packaging.UI.zip" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
@@ -408,7 +434,6 @@
     <Content Include="Views\CommentBlock\Index.cshtml" />
     <Content Include="Views\Login\LoginBlock.cshtml" />
     <Content Include="Views\RssPage\Index.cshtml" />
-    <Content Include="modules\_protected\CMO\module.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
