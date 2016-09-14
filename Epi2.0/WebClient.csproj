@@ -328,13 +328,19 @@
     <Compile Include="Models\Blocks\LocationBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Pages\AdminToolLocation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\Pages\Forum.cs" />
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\RssPage.cs" />
     <Compile Include="Models\Pages\StandardPageType.cs" />
+    <Compile Include="Models\Pages\StartPageType.cs" />
     <Compile Include="Models\Pages\ValidationPreviewRenderer.cs" />
     <Compile Include="Models\ViewModels\BlockViewModel.cs" />
     <Compile Include="Models\ViewModels\CommentViewmodel.cs" />
@@ -348,7 +354,9 @@
   <ItemGroup>
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
+    <Folder Include="Views\MenuTree\" />
     <Folder Include="Views\Shared\" />
+    <Folder Include="Views\TreeView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DBScript\DDSComment.txt" />
@@ -415,6 +423,7 @@
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
     <Content Include="Util\Editor\tinymce\plugins\PasteUnformatted\editor_plugin.js" />
     <Content Include="js\jquery.validate.min.js" />
+    <Content Include="Views\Questionnaire\JavaScript.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
@@ -434,6 +443,12 @@
     <Content Include="Views\CommentBlock\Index.cshtml" />
     <Content Include="Views\Login\LoginBlock.cshtml" />
     <Content Include="Views\RssPage\Index.cshtml" />
+    <Content Include="Views\AdminToolLocation\Index.cshtml" />
+    <Content Include="Views\Forum\Index.cshtml" />
+    <Content Include="Views\Mailing\Index.cshtml" />
+    <Content Include="Views\Question\Index.cshtml" />
+    <Content Include="Views\Questionnaire\Index.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
