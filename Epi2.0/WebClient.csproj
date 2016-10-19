@@ -297,13 +297,24 @@
     <Compile Include="CommentService.svc.cs">
       <DependentUpon>CommentService.svc</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AdminToolLocationController.cs" />
+    <Compile Include="Controllers\CaptchaController.cs" />
     <Compile Include="Controllers\CommentBlockController.cs" />
+    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
+    <Compile Include="Controllers\MailingController.cs" />
+    <Compile Include="Controllers\MenuTreeController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\QuestionnaireController.cs" />
     <Compile Include="Controllers\RssPageController.cs" />
+    <Compile Include="Controllers\SiteConfig.cs" />
+    <Compile Include="Controllers\SiteMap.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\ValidationPreviewRendererController.cs" />
+    <Compile Include="Controllers\XMLClassSerializer.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\MyButton.cs" />
     <Compile Include="Editor\TinyMCE\Plugins\PasteUnformatted.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -361,11 +372,19 @@
   <ItemGroup>
     <Content Include="App_Data\DBScript\DDSComment.txt" />
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="ClientResources\LocationBlockEditor\FilterableSelectionEditor.js" />
+    <Content Include="ClientResources\LocationBlockEditor\LocationBlockContainer.js" />
+    <Content Include="ClientResources\Scripts\CustomProperty\DojoProperty.js" />
+    <Content Include="ClientResources\Scripts\CustomProperty\templates\DojoProperty.html" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolcommand.js" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolmaintoolbar.js" />
+    <Content Include="ClientResources\Scripts\CustomTool\customtoolview.js" />
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
     <Content Include="ClientResources\Styles\Styles.css" />
     <Content Include="CommentService.svc" />
     <Content Include="ForumService.svc" />
+    <Content Include="GruntFile.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="modules\Duk.EPiServer.Disqus\ClientResources\DisqusBlockIcon.png" />
     <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AdminLinks.js" />
@@ -409,9 +428,12 @@
     <Content Include="modules\_protected\EPiServer.Social\module.config" />
     <Content Include="modules\_protected\EPiServer.Social\Views\Web.config" />
     <Content Include="modules\_protected\EPiServer.Social\web.config" />
+    <Content Include="NotFound.aspx" />
     <Content Include="package.json" />
     <Content Include="sass\style.scss" />
     <Content Include="modules\_protected\repository.config" />
+    <Content Include="License.config" />
+    <None Include="Properties\PublishProfiles\ST.pubxml" />
     <None Include="scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="scripts\jquery-1.6.4.js" />
@@ -419,6 +441,29 @@
     <Content Include="scripts\jquery.signalR-2.0.3.js" />
     <Content Include="scripts\jquery.signalR-2.0.3.min.js" />
     <Content Include="Static\css\Editor.css" />
+    <Content Include="templates\footer.html" />
+    <Content Include="templates\header.html" />
+    <Content Include="ui\background-learner.png" />
+    <Content Include="ui\css\master.css" />
+    <Content Include="ui\grunt-config\aliases.js" />
+    <Content Include="ui\grunt-config\replace.js" />
+    <Content Include="ui\grunt-config\sass.js" />
+    <Content Include="ui\grunt-config\uiPaths.js" />
+    <Content Include="ui\grunt-config\watch.js" />
+    <Content Include="ui\images\apple-touch-icon-precomposed.png" />
+    <Content Include="ui\images\background-learner.png" />
+    <Content Include="ui\images\episerver.png" />
+    <Content Include="ui\images\favicon.ico" />
+    <Content Include="ui\js\main.js" />
+    <Content Include="ui\partials\404.html" />
+    <Content Include="ui\partials\about.html" />
+    <Content Include="ui\partials\blog.html" />
+    <Content Include="ui\partials\blog_item.html" />
+    <Content Include="ui\partials\contact.html" />
+    <Content Include="ui\partials\faq.html" />
+    <Content Include="ui\partials\home.html" />
+    <Content Include="ui\partials\pricing.html" />
+    <Content Include="ui\partials\services.html" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\editor_plugin.js" />
     <Content Include="Util\Editor\tinymce\plugins\MyButton\Mybutton.gif" />
     <Content Include="Util\Editor\tinymce\plugins\PasteUnformatted\editor_plugin.js" />
@@ -449,6 +494,7 @@
     <Content Include="Views\Question\Index.cshtml" />
     <Content Include="Views\Questionnaire\Index.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="ui\sass\master.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
