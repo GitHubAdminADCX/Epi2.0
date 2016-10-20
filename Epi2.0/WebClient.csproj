@@ -300,6 +300,7 @@
     <Compile Include="Controllers\CommentBlockController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePartialController.cs" />
+    <Compile Include="Controllers\MenuTreeController.cs" />
     <Compile Include="Controllers\MyAdminPluginController.cs" />
     <Compile Include="Controllers\PropertiesDividerController.cs" />
     <Compile Include="Controllers\RssPageController.cs" />
@@ -327,6 +328,7 @@
     <Compile Include="Models\Blocks\CommentBlock.cs" />
     <Compile Include="Models\Blocks\LocationBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
+    <Compile Include="Models\Blocks\MenuTree.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\LoginModel.cs" />
@@ -336,6 +338,7 @@
     <Compile Include="Models\Pages\AdminToolPagetype.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\Pages\ArchivePagesJob.cs" />
     <Compile Include="Models\Pages\Forum.cs" />
     <Compile Include="Models\Pages\PropertiesSeperator.cs" />
     <Compile Include="Models\Pages\RssPage.cs" />
@@ -354,12 +357,12 @@
   <ItemGroup>
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\MenuTree\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\TreeView\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\DBScript\DDSComment.txt" />
+    <Content Include="App_Data\TextFile1.txt" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="ClientResources\Scripts\Editors\divider.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
@@ -367,6 +370,9 @@
     <Content Include="CommentService.svc" />
     <Content Include="ForumService.svc" />
     <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jsbn.js" />
+    <Content Include="js\jsbn2.js" />
+    <Content Include="js\RSA.min.js" />
     <Content Include="modules\Duk.EPiServer.Disqus\ClientResources\DisqusBlockIcon.png" />
     <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AdminLinks.js" />
     <Content Include="modules\_protected\Duk.EPiServer.Disqus.UI\ClientResources\AreaSettings.js" />
@@ -449,6 +455,7 @@
     <Content Include="Views\Question\Index.cshtml" />
     <Content Include="Views\Questionnaire\Index.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\MenuTree\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+    <div class="menutree">
+        <ul id="navlist"></ul>
+    </div>
+</body>
+</html>
+<script>
+
+    var values = @Html.Raw(Json.Encode(Model));
+    debugger;
+    var menutree = "";
+
+    for(var i=0;i<values.Data.length;i++)
+    {
+        menutree ="";
+        debugger;
+        menutree = menutree + '<li><div><a href="'+values.Data[i].Link+'" target="_blank">'+values.Data[i].pagename+'</a>';
+
+        if(values.Data[i].child.length > 0)
+        {
+            //menutree = menutree + "<ul>";
+            var a ='';
+            var str = loadchild(values.Data[i].child,a);
+            debugger;
+            menutree = menutree + str;
+            //menutree = menutree + "</ul>"
+        }
+        else{
+
+        }
+        menutree = menutree + '</div></li>';
+        $("#navlist").append(menutree);
+    }
+
+
+
+    function loadchild(data,a)
+    {
+        debugger;
+        a = a + '';
+        a=a + '<ul>';
+        for(var k=0;k<data.length;k++)
+        {
+
+            a = a + '<li><div><a href="'+ data[k].Link+'" target="_blank">'+ data[k].pagename+'</a>';
+
+            if(data[k].child.length==0){
+
+                a = a + '</div></li>';
+            }else{
+                
+                var b ='';
+                b = loadchild(data[k].child,b);
+                a = a + b;
+            }
+        }
+        a=a+'</ul>';
+
+        return a;
+
+    }
+
+</script>

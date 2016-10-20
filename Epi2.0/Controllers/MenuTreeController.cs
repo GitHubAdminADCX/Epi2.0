@@ -20,10 +20,11 @@ namespace WebClient.Controllers
     {
 
         // FRM011 This Action is only to Display the logic in BlockType
-        public override ActionResult Index(MenuTree lb)
+        public override ActionResult Index(MenuTree currentBlock)
         {
-          var menu =   MenuTree(lb);
-            return (menu);
+          var menu =   MenuTree(currentBlock);
+            //return (menu);
+            return View(menu);
 
         }
 
@@ -35,9 +36,11 @@ namespace WebClient.Controllers
 
            
             List<pageparent> FullMenuTree = new List<pageparent>();
-            PageDataCollection PageData = DataFactory.Instance.GetChildren(new PageReference(ConfigurationManager.AppSettings["RootPage"]));
+            //PageDataCollection PageData = DataFactory.Instance.GetChildren(new PageReference(ConfigurationManager.AppSettings["RootPage"]));
+            PageDataCollection PageData = DataFactory.Instance.GetChildren(lb.Parentreference);
 
-            foreach(var i in PageData)
+
+            foreach (var i in PageData)
             {
                 pageparent PagePrnt = new pageparent();
                 PagePrnt.pagename = i.Name;

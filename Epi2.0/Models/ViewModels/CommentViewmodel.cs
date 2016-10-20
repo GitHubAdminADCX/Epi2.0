@@ -32,5 +32,7 @@ namespace WebClient.Models.ViewModels
         
         public CommentBlock commentblockproperties { get; set; }
 
+        public string publickey { get; set; }
+
     }
 }

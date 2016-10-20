@@ -1,12 +1,17 @@
-﻿using EPiServer.Data.Dynamic;
+﻿using EPiServer.ClientScript;
+using EPiServer.Data.Dynamic;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
+using System;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web.Mvc;
 using WebClient.Business.Entities.DDS;
 using WebClient.Models.Blocks;
 using WebClient.Models.ViewModels;
+
 
 namespace WebClient.Controllers
 {
@@ -28,8 +33,48 @@ namespace WebClient.Controllers
         // GET: CommentBlock
         public override ActionResult Index(CommentBlock currentBlock)
         {
+            string a = "";
+            CommentService service = new CommentService();
+            byte[] data = service.GetPublicKey();
+            using (RijndaelManaged rijAlg = new RijndaelManaged())
+            {
+                string[] key = System.IO.File.ReadAllLines(Server.MapPath("~/App_Data/TextFile1.txt"));
+                rijAlg.Key = Convert.FromBase64String("f5Bia7HKcuiGoJEvXDM9ag==");
+                rijAlg.IV = Convert.FromBase64String("f5Bia7HKcuiGoJEvXDM9ag=="); 
 
-            var pageRouteHelper = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<EPiServer.Web.Routing.PageRouteHelper>();
+
+                // Create a decrytor to perform the stream transform.
+                ICryptoTransform decryptor = rijAlg.CreateDecryptor(rijAlg.Key, rijAlg.IV);
+                try
+                {
+                    // Create the streams used for decryption.
+                    using (MemoryStream msDecrypt = new MemoryStream(data))
+                    {
+                        using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                        {
+                            using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                            {
+
+                                // Read the decrypted bytes from the decrypting stream
+                                // and place them in a string.
+                                //txtKey.Text = srDecrypt.ReadToEnd();
+                                a=srDecrypt.ReadToEnd();
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "", "alert('Public key is invalid.')", true);
+                }
+            }
+
+
+
+
+
+
+                var pageRouteHelper = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<EPiServer.Web.Routing.PageRouteHelper>();
             var pageId = pageRouteHelper.ContentLink.ID;
             var Page = pageRouteHelper.Page;
             var PageURl = ServiceLocator.Current.GetInstance<UrlResolver>()
@@ -50,7 +95,8 @@ namespace WebClient.Controllers
                 pageId = pageId,
                 Comments = list,
                 Page = Page,
-                pageURl = PageURl.VirtualPath.ToString()
+                pageURl = PageURl.VirtualPath.ToString(),
+                publickey = a
             };
             //var model = BlockViewModel.Create(currentBlock);
             //return PartialView();

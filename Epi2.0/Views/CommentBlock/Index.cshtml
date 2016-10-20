@@ -3,7 +3,11 @@
 @using EPiServer.ServiceLocation
 @using EPiServer.Web.Routing
 @model CommentViewModel
+    <div>@Model.publickey
+    <input type="hidden" name="key" value="@Model.publickey" />
+   </div>
 <div class="container">
+    
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
@@ -61,12 +65,58 @@
 
 
 <head>
+  
     <script src="~/js/jquery-1.10.2.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <script src="~/js/jsbn.js"></script>
+    <script src="~/js/jsbn2.js"></script>
+    <script src="~/js/RSA.min.js"></script>
+
 
     <script type="text/javascript">
         $('.dvReply').hide();
+
+        debugger;
+        var pkey = $('input[name=key]').val().split(',');
+       
+        var rsa = new RSAKey();
+        rsa.setPublic(pkey[1], pkey[0]);
+        var username = rsa.encrypt("AMol");
+        debugger;
+        encryption();
+
+        function encryption()
+        {
+
+            var data = {
+                name: username
+            };
+
+            $.ajax({
+                type: "GET",
+                url: '/CommentService.svc/getdecrypted',
+                data: data, // the data in JSON format.  Note it is *not* a JSON object, is is a literal string in JSON format
+                contentType: "application/json; charset=utf-8", // we are sending in JSON format so we need to specify this
+                dataType: "json", // the data type we want back.  The data will come back in JSON format
+                success: function (data) {
+                    alert("success"); // it's a quirk, but the JSON data comes back in a property called "d"; {"d":"Hello Aidy F"}
+                }
+            });
+
+
+
+           
+            //$.getJSON('/CommentService.svc/getdecrypted', data, successFunc, errorFunc);
+
+            //function successFunc(data, status) {
+            //    alert('success');
+            //}
+            //function errorFunc() {
+            //    alert('error');
+            //}
+        }
+
 
         function AddComment(c) {
             if (c.parent('.Addchildcomments').find('textarea[name=commentText]').val().trim() != "") {
