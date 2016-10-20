@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CaptchaMvc, Version=2.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CaptchaMvc.Mvc4.1.5.0\lib\net40-full\CaptchaMvc.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
@@ -338,6 +342,7 @@
     <Compile Include="Models\Blocks\CommentBlock.cs" />
     <Compile Include="Models\Blocks\LocationBlock.cs" />
     <Compile Include="Models\Blocks\LoginBlock.cs" />
+    <Compile Include="Models\Blocks\MailBlock.cs" />
     <Compile Include="Models\Blocks\MenuTree.cs" />
     <Compile Include="Models\Custom\Attributes\ValidationProperty.cs" />
     <Compile Include="Models\Feedback.cs" />
@@ -355,10 +360,13 @@
     <Compile Include="Models\Pages\StandardPageType.cs" />
     <Compile Include="Models\Pages\StartPageType.cs" />
     <Compile Include="Models\Pages\ValidationPreviewRenderer.cs" />
+    <Compile Include="Models\ViewModels\AdminLocation.cs" />
+    <Compile Include="Models\ViewModels\AnswerViewModel.cs" />
     <Compile Include="Models\ViewModels\BlockViewModel.cs" />
     <Compile Include="Models\ViewModels\CommentViewmodel.cs" />
     <Compile Include="Models\ViewModels\IBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\IPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\MailBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Customization\ScheduledJobs\DeleteJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
