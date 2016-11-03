@@ -106,7 +106,9 @@ namespace WebClient
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             //Add Key Pair (Public + Private Key) to Cache to be used by ValidateUser
             HttpRuntime.Cache["KeyPair"] = rsa.ToXmlString(true);
+           
             RSAParameters param = rsa.ExportParameters(false);
+           
 
             string keyToSend = ToHexString(param.Exponent) + "," +
                  ToHexString(param.Modulus);
@@ -180,7 +182,7 @@ namespace WebClient
             rsa.FromXmlString(domainKey);
             string username = Encoding.UTF8.GetString(rsa.Decrypt(ToHexByte(name), false));
             //string password = Encoding.UTF8.GetString(rsa.Decrypt(ToHexByte(encPassword), false));
-            return "success";
+            return username;
         }
 
 
